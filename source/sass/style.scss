@@ -1,0 +1,14 @@
+@use "base/variables" as *;
+@use "base/mixins" as *;
+@use "base/global";
+@use "base/visually-hidden";
+@use "base/fonts";
+@use "layout/page";
+@use "layout/main";
+@use "components/title";
+@use "components/button";
+@use "components/container";
+@use "components/intro";
+@use "components/works";
+@use "components/skills";
+@use "components/social";

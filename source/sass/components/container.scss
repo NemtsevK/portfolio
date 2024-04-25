@@ -1,0 +1,17 @@
+@use "../base/variables" as *;
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    max-width: 1220px;
+  }
+}
+

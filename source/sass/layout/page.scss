@@ -1,0 +1,16 @@
+@use "../base/variables" as *;
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+}

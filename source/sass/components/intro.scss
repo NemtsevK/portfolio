@@ -1,0 +1,68 @@
+@use "../base/variables" as *;
+
+.intro {
+  padding: 20px 0;
+
+  @media (min-width: $tablet) {
+    background-image: linear-gradient(to left, var(--secondary-bg-color) 50%, transparent 50%);
+  }
+
+  @media (min-width: $desktop) {
+    background-image: linear-gradient(to left, var(--secondary-bg-color) 50%, transparent 50%);
+  }
+}
+
+
+.intro__container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro__title {
+  margin: 0;
+}
+
+.intro__subtitle {
+  grid-column: 1;
+}
+
+.intro__description {
+  margin: 0;
+}
+
+.intro__email {
+  margin: 0;
+}
+
+.intro__email-link {
+  color: var(--special-text-color);
+}
+
+.intro__email-link:hover {
+  font-weight: 700;
+}
+
+.intro__picture {
+  justify-self: center;
+  align-self: start;
+}
+
+.intro__image {
+  justify-self: center;
+}

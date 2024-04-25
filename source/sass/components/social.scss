@@ -1,0 +1,40 @@
+@use "../base/variables" as *;
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--github::before {
+    background-image: url("../images/sprite.svg#github");
+  }
+
+  &--telegram::before {
+    background-image: url("../images/sprite.svg#telegram");
+  }
+}
