@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <style type="text/css">
+    .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#559BE7;}
+    .st1{fill:#FFFFFF;}
+  </style>
+  <circle class="st0" cx="250" cy="250" r="250"/>
+  <path class="st1" d="M290,402.9l-66.9-114l-16.7,95.9h-87.6l47.9-296l90.1,8.3l-16.3,91.7L355.3,82.5l56.7,58.4l-106.7,95.9
+		l80.9,128.8L290,402.9z"/>
+</svg>
