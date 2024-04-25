@@ -1,5 +1,13 @@
 @use "../base/variables" as *;
 
 .main__works {
-  margin-top: 50px;
+  margin-top: 30px;
+
+  @media (min-width: $tablet) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 50px;
+  }
 }
