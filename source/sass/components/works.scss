@@ -6,7 +6,10 @@
 }
 
 .works__title {
-  margin: 0;
+  display: inline-block;
+  margin: 0 0 -4px;
+  padding-bottom: 4px;
+  border-bottom: 4px solid #559BE7;
 }
 
 .works__list {
@@ -90,8 +93,19 @@
   margin: 10px 0 0;
 }
 
-.works__item-skills {
+.works__item-technologies {
+  display: flex;
+  gap: 8px;
   margin: 15px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.works__item-technology {
+  padding: 2px 6px;
+  color: var(--secondary-text-color);
+  border-radius: 6px;
+  background-color: var(--secondary-bg-color);
 }
 
 .works__area-button {

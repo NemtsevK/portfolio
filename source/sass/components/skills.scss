@@ -1,15 +1,90 @@
 @use "../base/variables" as *;
 
-.skills {
+.skills__title {
+  display: inline-block;
+  margin: 0 0 -4px;
+  padding-bottom: 4px;
+  border-bottom: 4px solid #559BE7;
+}
+
+.skills__list {
   display: flex;
-  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0 0;
   padding: 0;
   list-style: none;
 }
 
-.skills__item {
-  padding: 2px 6px;
-  color: var(--secondary-text-color);
-  border-radius: 6px;
-  background-color: var(--secondary-bg-color);
+.skills__item-link {
+  display: flex;
+  width: 100px;
+  height: 100px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  &--html::before {
+    background-image: url("../images/icons/html.svg");
+  }
+
+  &--css::before {
+    background-image: url("../images/icons/css.svg");
+  }
+
+  &--sass::before {
+    background-image: url("../images/icons/sass.svg");
+  }
+
+  &--less::before {
+    background-image: url("../images/icons/less.svg");
+  }
+
+  &--js::before {
+    background-image: url("../images/icons/js.svg");
+  }
+
+  &--ts::before {
+    background-image: url("../images/icons/ts.svg");
+  }
+
+  &--react::before {
+    background-image: url("../images/icons/react.svg");
+  }
+
+  &--php::before {
+    background-image: url("../images/icons/php.svg");
+  }
+
+  &--mssql::before {
+    background-image: url("../images/icons/mssql.svg");
+  }
+
+  &--mysql::before {
+    background-image: url("../images/icons/mysql.svg");
+  }
+
+  &--maria-db::before {
+    background-image: url("../images/icons/maria-db.svg");
+  }
+
+  &--figma::before {
+    background-image: url("../images/icons/figma.svg");
+  }
 }

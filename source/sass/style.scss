@@ -4,6 +4,7 @@
 @use "base/visually-hidden";
 @use "base/fonts";
 @use "layout/page";
+@use "layout/header";
 @use "layout/main";
 @use "components/title";
 @use "components/button";
@@ -11,4 +12,4 @@
 @use "components/intro";
 @use "components/works";
 @use "components/skills";
-@use "components/social";
+@use "components/contacts";

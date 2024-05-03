@@ -17,6 +17,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
+<header class="header">
+  <div class="header__container container">
+    <button class="header__toggle-mode" title="Тёмная тема" aria-label="Переключиться на тёмную тему"></button>
+  </div>
+</header>
 <main class="main">
   <section class="intro">
     <div class="container intro__container">
@@ -24,11 +29,8 @@
         <h1 class="intro__title title-h1">Константин Немцев</h1>
         <span class="intro__subtitle">Фуллстек-разработчик</span>
         <p class="intro__description">Имею опыт разработки как фронтенд, так и бекенд части веб-сайта с использованием HTML, CSS, JavaScript, PHP и SQL. Есть опыт разработки на React.</p>
-        <p class="intro__email">Почта: <a class="intro__email-link" href="mailto:nemtsevk@hotmail.com">nemtsevk@hotmail.com</a></p>
-        <div class="intro__social social">
-          <a class="social__link social__link--github" href="https://github.com/nemtsev-k" target="_blank" rel="nofollow" title="Моя страница на GitHub" aria-label="Моя страница на GitHub"></a>
-          <a class="social__link social__link--telegram" href="https://t.me/nemtsev_k" target="_blank" rel="nofollow" title="Мой профиль в Телеграм" aria-label="Мой профиль в Телеграм"></a>
-        </div>
+        <p class="intro__description">Закончил магистратуру в <a class="intro__link" href="https://www.volgatech.net/" target="_blank">Поволжском государственном технологическом университете</a> по направлению «Информатика и вычислительная техника».</p>
+        <p class="intro__description">Прошёл 4 онлайн курса по фронтенд-разработке в <a class="intro__link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>.</p>
       </div>
       <div class="intro__picture">
         <picture>
@@ -37,20 +39,63 @@
       </div>
     </div>
   </section>
-  <section class="main__works works">
+  <section class="main__skills skills" id="skills">
     <div class="container">
-      <h2 class="works__title title-h1">Последние мои работы</h2>
+      <h2 class="skills__title title-h1">Навыки</h2>
+      <ul class="skills__list">
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--html" href="https://html.spec.whatwg.org/multipage/" title="HTML" aria-label="HTML" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--css" href="https://www.w3.org/Style/CSS/" title="CSS" aria-label="CSS" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--sass" href="https://sass-lang.com/" title="Sass" aria-label="Sass" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--less" href="https://lesscss.org/" title="LESS" aria-label="LESS" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--js" href="https://ecma-international.org/publications-and-standards/standards/ecma-262/" title="JavaScript" aria-label="JavaScript" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--ts" href="https://www.typescriptlang.org/" title="TypeScript" aria-label="TypeScript" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--react" href="https://react.dev/" title="React" aria-label="React" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--php" href="https://www.php.net/" title="PHP" aria-label="PHP" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--mssql" href="https://www.microsoft.com/en-us/sql-server" title="Microsoft SQL Server" aria-label="Microsoft SQL Server" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--mysql" href="https://www.mysql.com/" title="MySQL" aria-label="MySQL" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--maria-db" href="https://mariadb.org/" title="MariaDB" aria-label="MariaDB" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="skills__item">
+          <a class="skills__item-link skills__item-link--figma" href="https://www.figma.com/" title="Figma" aria-label="Figma" target="_blank" rel="nofollow"></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="main__works works" id="works">
+    <div class="container">
+      <h2 class="works__title title-h1">Последние работы</h2>
       <ul class="works__list">
         <li class="works__item">
           <a class="works__item-link" href="https://nemtsev-k.github.io/cat-energy/" target="_blank" rel="nofollow">
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Кэт энерджи</h3>
               <p class="works__item-description">Магазин функционального питание для котов.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">HTML</li>
-                <li class="skills__item">SCSS</li>
-                <li class="skills__item">JS</li>
-                <li class="skills__item">Gulp</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">HTML</li>
+                <li class="works__item-technology">SCSS</li>
+                <li class="works__item-technology">JS</li>
+                <li class="works__item-technology">Gulp</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -65,11 +110,11 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Седона</h3>
               <p class="works__item-description">Поиск гостиниц в небольшом городке.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">HTML</li>
-                <li class="skills__item">SCSS</li>
-                <li class="skills__item">JS</li>
-                <li class="skills__item">Gulp</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">HTML</li>
+                <li class="works__item-technology">SCSS</li>
+                <li class="works__item-technology">JS</li>
+                <li class="works__item-technology">Gulp</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -84,10 +129,10 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Кексаграм</h3>
               <p class="works__item-description">Сервис просмотра изображений.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">JS</li>
-                <li class="skills__item">ES Modules</li>
-                <li class="skills__item">Vite</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">JS</li>
+                <li class="works__item-technology">ES Modules</li>
+                <li class="works__item-technology">Vite</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -102,12 +147,12 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Большое путешествие</h3>
               <p class="works__item-description">Сервис для путешественников.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">JS</li>
-                <li class="skills__item">ООП</li>
-                <li class="skills__item">SPA</li>
-                <li class="skills__item">MVP</li>
-                <li class="skills__item">Vite</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">JS</li>
+                <li class="works__item-technology">ООП</li>
+                <li class="works__item-technology">SPA</li>
+                <li class="works__item-technology">MVP</li>
+                <li class="works__item-technology">Vite</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -122,10 +167,10 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Шесть городов</h3>
               <p class="works__item-description">Сервис для путешественников.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">TypeScript</li>
-                <li class="skills__item">React</li>
-                <li class="skills__item">Redux</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">TypeScript</li>
+                <li class="works__item-technology">React</li>
+                <li class="works__item-technology">Redux</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -140,11 +185,11 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Многогранники</h3>
               <p class="works__item-description">Визуализация множества трёхмерных тел.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">HTML</li>
-                <li class="skills__item">SCSS</li>
-                <li class="skills__item">JS</li>
-                <li class="skills__item">Gulp</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">HTML</li>
+                <li class="works__item-technology">SCSS</li>
+                <li class="works__item-technology">JS</li>
+                <li class="works__item-technology">Gulp</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -159,9 +204,9 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Девайс</h3>
               <p class="works__item-description">Магазин гаджетов.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">HTML</li>
-                <li class="skills__item">CSS</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">HTML</li>
+                <li class="works__item-technology">CSS</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -176,9 +221,9 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Глейси</h3>
               <p class="works__item-description">Магазин мороженого.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">HTML</li>
-                <li class="skills__item">CSS</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">HTML</li>
+                <li class="works__item-technology">CSS</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -193,9 +238,9 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Техномарт</h3>
               <p class="works__item-description">Магазин строительных материалов.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">HTML</li>
-                <li class="skills__item">CSS</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">HTML</li>
+                <li class="works__item-technology">CSS</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -210,11 +255,11 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Барбершоп</h3>
               <p class="works__item-description">Сайт мужской парикмахерской.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">HTML</li>
-                <li class="skills__item">SCSS</li>
-                <li class="skills__item">JS</li>
-                <li class="skills__item">Gulp</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">HTML</li>
+                <li class="works__item-technology">SCSS</li>
+                <li class="works__item-technology">JS</li>
+                <li class="works__item-technology">Gulp</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -229,11 +274,11 @@
             <div class="works__item-content">
               <h3 class="works__item-title title-h2">Мишка</h3>
               <p class="works__item-description">Магазин милых вещиц ручной работы.</p>
-              <ul class="works__item-skills skills">
-                <li class="skills__item">HTML</li>
-                <li class="skills__item">SCSS</li>
-                <li class="skills__item">JS</li>
-                <li class="skills__item">Gulp</li>
+              <ul class="works__item-technologies">
+                <li class="works__item-technology">HTML</li>
+                <li class="works__item-technology">SCSS</li>
+                <li class="works__item-technology">JS</li>
+                <li class="works__item-technology">Gulp</li>
               </ul>
             </div>
             <div class="works__item-picture">
@@ -247,6 +292,22 @@
       <div class="works__area-button">
         <button class="works__button button" type="button">Показать больше</button>
       </div>
+    </div>
+  </section>
+  <section class="main__contacts contacts" id="contacts">
+    <div class="container">
+      <h2 class="contacts__title title-h1">Контакты</h2>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <a class="contacts__item-link contacts__item-link--mail" href="mailto:nemtsevk@hotmail.com" title="Моя электронная почта" aria-label="Моя электронная почта" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__item-link contacts__item-link--telegram" href="https://t.me/nemtsev_k" title="Мой профиль в Телеграм" aria-label="Мой профиль в Телеграм" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__item-link contacts__item-link--github" href="https://github.com/nemtsev-k" title="Моя страница на GitHub" aria-label="Моя страница на GitHub" target="_blank" rel="nofollow"></a>
+        </li>
+      </ul>
     </div>
   </section>
 </main>
