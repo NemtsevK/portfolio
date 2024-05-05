@@ -20,13 +20,38 @@ const onToggleNavClick = (event) => {
   }
 }
 
+const onToggleThemeClick = (event) => {
+  const themeName = event.target.checked ? 'dark' : 'light';
+  window.localStorage.setItem('theme', themeName);
+  setTheme();
+}
+
+function setTheme() {
+  let titleText;
+
+  if (window.localStorage.getItem('theme') === 'dark') {
+    page.classList.add('theme-dark');
+    titleText = 'Светлая тема';
+    toggleThemeInput.checked = true;
+  } else {
+    page.classList.remove('theme-dark');
+    titleText = 'Тёмная тема';
+    toggleThemeInput.checked = false;
+  }
+  toggleTheme.setAttribute('aria-label', titleText);
+  toggleTheme.setAttribute('title', titleText);
+}
+
 const onNavLinkClick = () => {
   nav.classList.toggle('nav--opened');
   toggleNav.checked = false;
 }
 
+setTheme();
+
 page.classList.remove('page--nojs');
 toggleNavInput.addEventListener('click', onToggleNavClick);
+toggleThemeInput.addEventListener('click', onToggleThemeClick);
 navLinks.forEach(navLink => navLink.addEventListener('click', onNavLinkClick));
 
 let showItems = false;

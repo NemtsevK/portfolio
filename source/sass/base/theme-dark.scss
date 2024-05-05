@@ -1,0 +1,58 @@
+.theme-dark {
+  --primary-bg-color: #23272F;
+  --secondary-bg-color: #70aae8;
+
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #23272F;
+  --special-text-color: #70aae8;
+
+  --primary-border-color: #dddddd;
+
+  .header__toggle-theme::before {
+    mask-image: url("../images/sprite.svg#light");
+  }
+
+  .contacts__item-link::before {
+    background-color: var(--primary-text-color);
+  }
+
+  .skills__item-link {
+
+    &--html::before {
+      background-image: url("../images/icons/html-alt.svg");
+    }
+
+    &--css::before {
+      background-image: url("../images/icons/css-alt.svg");
+    }
+
+    &--sass::before {
+      background-image: url("../images/icons/sass-alt.svg");
+    }
+
+    &--react::before {
+      background-image: url("../images/icons/react-alt.svg");
+    }
+
+    &--mssql::before {
+      background-image: url("../images/icons/mssql-alt.svg");
+    }
+
+    &--mysql::before {
+      background-image: url("../images/icons/mysql-alt.svg");
+    }
+
+    &--maria-db::before {
+      background-image: url("../images/icons/maria-db-alt.svg");
+    }
+
+    &--figma::before {
+      background-image: url("../images/icons/figma-alt.svg");
+    }
+  }
+
+  .works__item-technology {
+    color: var(--primary-text-color);
+  }
+
+}
