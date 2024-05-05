@@ -35,14 +35,16 @@
 }
 
 .intro__title {
-  align-self: start;
+  align-self: center;
   margin: 0 0 -4px;
   padding-bottom: 4px;
   border-bottom: 4px solid #559BE7;
 }
 
 .intro__subtitle {
-  grid-column: 1;
+  align-self: center;
+  //grid-column: 1;
+  font-weight: 700;
 }
 
 .intro__description {

@@ -1,8 +1,12 @@
 @use "../base/variables" as *;
 
+.skills__container {
+  text-align: center;
+}
+
 .skills__title {
   display: inline-block;
-  margin: 0 0 -4px;
+  margin: 0 auto -4px;
   padding-bottom: 4px;
   border-bottom: 4px solid #559BE7;
 }

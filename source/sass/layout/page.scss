@@ -1,7 +1,28 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .page {
   height: 100%;
+
+  &--nojs {
+
+    .header__toggle-nav {
+      @include visually-hidden();
+    }
+
+    .header__toggle-theme {
+      grid-column: 3;
+    }
+
+    @media (max-width: calc($tablet - 1px)) {
+
+      .nav {
+        margin-top: 20px;
+        position: static;
+        display: block;
+      }
+    }
+  }
 }
 
 .page__body {
@@ -13,4 +34,11 @@
   font-weight: 400;
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
+}
+
+.page__main {
+
+  @media (min-width: $tablet) {
+    margin-top: 10px;
+  }
 }

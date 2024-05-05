@@ -1,17 +1,25 @@
 @use "../base/variables" as *;
 
-.main {
-  padding-top: 30px;
+.main__skills {
+  margin-top: 40px;
 
   @media (min-width: $tablet) {
-    padding-top: 40px;
+    margin-top: 50px;
   }
 }
 
 .main__works {
-  margin-top: 30px;
+  margin-top: 40px;
 
   @media (min-width: $tablet) {
-    margin-top: 40px;
+    margin-top: 50px;
+  }
+}
+
+.main__contacts {
+  margin-top: 40px;
+
+  @media (min-width: $tablet) {
+    margin-top: 50px;
   }
 }

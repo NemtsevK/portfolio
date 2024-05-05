@@ -16,4 +16,10 @@
     background-color: var(--primary-bg-color);
     cursor: pointer;
   }
+
+  &:active {
+    color: var(--secondary-text-color);
+    outline: none;
+    background-color: var(--secondary-bg-color);
+  }
 }

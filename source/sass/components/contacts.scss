@@ -1,7 +1,19 @@
 @use "../base/variables" as *;
 
 .contacts {
-  padding: 0 0 40px;
+  padding: 0 0 20px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 40px;
+  }
+}
+
+.contacts__container {
+  text-align: center;
 }
 
 .contacts__title {

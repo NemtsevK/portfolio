@@ -1,0 +1,83 @@
+@use "../base/variables" as *;
+
+.nav {
+  position: relative;
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  &--opened {
+    display: flex;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--primary-border-color);
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 40px;
+  }
+}
+
+.nav__item {
+  border-top: 1px solid var(--primary-border-color);
+
+  @media (min-width: $tablet) {
+    border-top: none;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding: 20px 0;
+  color: var(--primary-text-color);
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: calc($tablet - 1px)) {
+
+  .nav--opened .nav__list {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--primary-bg-color);
+  }
+}
+
