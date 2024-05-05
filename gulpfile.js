@@ -13,6 +13,7 @@ import del from 'del';
 import browser from 'browser-sync';
 import replace from 'gulp-replace';
 import {stacksvg} from 'gulp-stacksvg';
+import dayjs from 'dayjs';
 
 export const styles = () => {
   return gulp.src('source/sass/style.scss', {sourcemaps: true})
@@ -35,10 +36,12 @@ const scripts = () => {
     .pipe(browser.stream());
 };
 
+const currentDateTimeString = dayjs().format('YYYYMMDDHHmmss');
+
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(replace('.css', '.min.css'))
-    .pipe(replace('.js', '.min.js'))
+    .pipe(replace('.css', `.min.css?${currentDateTimeString}`))
+    .pipe(replace('.js', `.min.js?${currentDateTimeString}`))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 };
@@ -87,7 +90,7 @@ const copy = (done) => {
   done();
 };
 
-const clean = () =>  del('build');
+const clean = () => del('build');
 
 const server = (done) => {
   browser.init({
@@ -158,5 +161,5 @@ export default gulp.series(
     createStack,
     createWebp
   ),
-  gulp.series(server,watcher)
+  gulp.series(server, watcher)
 );
