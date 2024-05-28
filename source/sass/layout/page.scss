@@ -3,6 +3,7 @@
 
 .page {
   height: 100%;
+  scrollbar-gutter: stable;
 
   &--nojs {
 
@@ -32,8 +33,12 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  color: var(--primary-text-color);
-  background-color: var(--primary-bg-color);
+  color: var(--primary-text);
+  background-color: var(--primary-background);
+
+  &--scroll-lock {
+    overflow: hidden;
+  }
 }
 
 .page__main {
