@@ -23,20 +23,26 @@
     <label class="header__toggle-theme" title="Тёмная тема" aria-label="Переключиться на тёмную тему">
       <input class="header__toggle-theme-checkbox visually-hidden" type="checkbox">
     </label>
-    <label class="header__toggle-nav" aria-label="Открыть меню" title="Открыть меню">
+    <label class="header__toggle-nav" aria-label="Открыть меню">
       <input class="header__toggle-nav-checkbox visually-hidden" type="checkbox">
       <span class="header__toggle-nav-inner"></span>
     </label>
     <nav class="header__nav nav">
       <ul class="nav__list">
         <li class="nav__item">
-          <a class="nav__link" href="#skills">Навыки</a>
+          <a class="nav__link" href="#skills">
+            <span class="nav__link-text">Навыки</span>
+          </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#works">Проекты</a>
+          <a class="nav__link" href="#works">
+            <span class="nav__link-text">Проекты</span>
+          </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#contacts">Контакты</a>
+          <a class="nav__link" href="#contacts">
+            <span class="nav__link-text">Контакты</span>
+          </a>
         </li>
       </ul>
     </nav>
@@ -62,291 +68,13 @@
   <section class="main__skills skills" id="skills">
     <div class="skills__container container">
       <h2 class="skills__title title-h1">Навыки</h2>
-      <ul class="skills__list">
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--html" href="https://html.spec.whatwg.org/multipage/" title="HTML" aria-label="HTML" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--css" href="https://www.w3.org/Style/CSS/" title="CSS" aria-label="CSS" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--sass" href="https://sass-lang.com/" title="Sass" aria-label="Sass" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--less" href="https://lesscss.org/" title="LESS" aria-label="LESS" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--js" href="https://ecma-international.org/publications-and-standards/standards/ecma-262/" title="JavaScript" aria-label="JavaScript" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--ts" href="https://www.typescriptlang.org/" title="TypeScript" aria-label="TypeScript" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--react" href="https://react.dev/" title="React" aria-label="React" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--php" href="https://www.php.net/" title="PHP" aria-label="PHP" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--mssql" href="https://www.microsoft.com/en-us/sql-server" title="Microsoft SQL Server" aria-label="Microsoft SQL Server" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--mysql" href="https://www.mysql.com/" title="MySQL" aria-label="MySQL" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--maria-db" href="https://mariadb.org/" title="MariaDB" aria-label="MariaDB" target="_blank" rel="nofollow"></a>
-        </li>
-        <li class="skills__item">
-          <a class="skills__item-link skills__item-link--figma" href="https://www.figma.com/" title="Figma" aria-label="Figma" target="_blank" rel="nofollow"></a>
-        </li>
-      </ul>
+      <ul class="skills__list"></ul>
     </div>
   </section>
   <section class="main__works works" id="works">
     <div class="works__container container">
       <h2 class="works__title title-h1">Проекты</h2>
-      <ul class="works__list">
-        <li class="works__item">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/cat-energy/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Кэт энерджи</h3>
-              <p class="works__item-description">Магазин функционального питания для котов.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">Sass</li>
-                <li class="works__item-technology">JS</li>
-                <li class="works__item-technology">Gulp</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/cat-energy.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/sedona/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Седона</h3>
-              <p class="works__item-description">Поиск гостиниц в небольшом городке.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">Sass</li>
-                <li class="works__item-technology">JS</li>
-                <li class="works__item-technology">Gulp</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/sedona.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/kekstagram/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Кексаграм</h3>
-              <p class="works__item-description">Сервис просмотра изображений.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">JS</li>
-                <li class="works__item-technology">ES Modules</li>
-                <li class="works__item-technology">Vite</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/kekstagram.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/big-trip/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Большое путешествие</h3>
-              <p class="works__item-description">Сервис для путешественников.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">JS</li>
-                <li class="works__item-technology">ООП</li>
-                <li class="works__item-technology">SPA</li>
-                <li class="works__item-technology">MVP</li>
-                <li class="works__item-technology">Vite</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/big-trip.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="https://github.com/nemtsev-k/six-cities" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Шесть городов</h3>
-              <p class="works__item-description">Сервис для путешественников.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">TypeScript</li>
-                <li class="works__item-technology">React</li>
-                <li class="works__item-technology">Redux</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/six-cities.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/polyhedrons/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Многогранники</h3>
-              <p class="works__item-description">Визуализация множества трёхмерных тел.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">Sass</li>
-                <li class="works__item-technology">JS</li>
-                <li class="works__item-technology">Gulp</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/polyhedrons.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item works__item--hide">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/pink/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Пинк</h3>
-              <p class="works__item-description">Реклама мобильного приложения.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">Less</li>
-                <li class="works__item-technology">JS</li>
-                <li class="works__item-technology">Gulp</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/pink.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item works__item--hide">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/nerds/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Нёрдс</h3>
-              <p class="works__item-description">Сайт дизайн-студии.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">Less</li>
-                <li class="works__item-technology">JS</li>
-                <li class="works__item-technology">Gulp</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/nerds.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item works__item--hide">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/device/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Девайс</h3>
-              <p class="works__item-description">Магазин гаджетов.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">CSS</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/device.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item works__item--hide">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/gllacy/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Глейси</h3>
-              <p class="works__item-description">Магазин мороженого.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">CSS</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/gllacy.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item works__item--hide">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/technomart/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Техномарт</h3>
-              <p class="works__item-description">Магазин строительных материалов.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">CSS</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/technomart.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item works__item--hide">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/barbershop/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Барбершоп</h3>
-              <p class="works__item-description">Сайт мужской парикмахерской.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">Sass</li>
-                <li class="works__item-technology">JS</li>
-                <li class="works__item-technology">Gulp</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/barbershop.jpg" alt="" loading="lazy">
-              </picture>
-            </div>
-          </a>
-        </li>
-        <li class="works__item works__item--hide">
-          <a class="works__item-link" href="https://nemtsev-k.github.io/mishka/" target="_blank" rel="nofollow">
-            <div class="works__item-content">
-              <h3 class="works__item-title title-h2">Мишка</h3>
-              <p class="works__item-description">Магазин милых вещиц ручной работы.</p>
-              <ul class="works__item-technologies">
-                <li class="works__item-technology">HTML</li>
-                <li class="works__item-technology">Sass</li>
-                <li class="works__item-technology">JS</li>
-                <li class="works__item-technology">Gulp</li>
-              </ul>
-            </div>
-            <div class="works__item-picture">
-              <picture>
-                <img class="works__item-image" src="images/content/mishka.jpg" alt="">
-              </picture>
-            </div>
-          </a>
-        </li>
-      </ul>
+      <ul class="works__list"></ul>
       <div class="works__area-button">
         <button class="works__button button" type="button">Показать больше</button>
       </div>
@@ -369,6 +97,40 @@
     </div>
   </section>
 </main>
-<script src="js/main.js"></script>
+
+<dialog class="modal">
+  <button id="close">Закрыть окно</button>
+  <h3 class="modal__title"></h3>
+  <p class="modal__description"></p>
+  <p class="modal__about"></p>
+  <a class="modal__link-site" href="" target="_blank" rel="nofollow noopener">Сайт</a>
+  <a class="modal__link-source" href="" target="_blank" rel="nofollow noopener">Исходный код</a>
+</dialog>
+
+<template id="skill">
+  <li class="skills__item">
+    <a class="skills__item-link" href="" target="_blank" rel="nofollow"></a>
+  </li>
+</template>
+
+<template id="work">
+  <li class="works__item">
+    <label class="works__item-link">
+      <div class="works__item-content">
+        <h3 class="works__item-title title-h2"></h3>
+        <p class="works__item-description"></p>
+        <ul class="works__item-technologies"></ul>
+      </div>
+      <div class="works__item-picture">
+        <picture>
+          <img class="works__item-image" src="" alt="">
+        </picture>
+      </div>
+      <input class="works__item-input" name="work" type="hidden" value="">
+    </label>
+  </li>
+</template>
+
+<script src="js/main.js" type="module"></script>
 </body>
 </html>

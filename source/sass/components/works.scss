@@ -9,7 +9,8 @@
   display: inline-block;
   margin: 0 0 -4px;
   padding-bottom: 4px;
-  border-bottom: 4px solid #559BE7;
+  text-transform: uppercase;
+  border-bottom: 4px solid var(--secondary-background);
 }
 
 .works__list {
@@ -50,16 +51,17 @@
   height: 100%;
   overflow: hidden;
   text-decoration: none;
-  color: var(--primary-text-color);
+  color: var(--primary-text);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-}
+  cursor: pointer;
 
-.works__item-link:hover {
-  opacity: 0.8;
-}
+  &:hover {
+    opacity: 0.8;
+  }
 
-.works__item-link:active {
-  opacity: 0.6;
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .works__item-content {
@@ -88,10 +90,12 @@
 
 .works__item-title {
   margin: 0;
+  text-align: left;
 }
 
 .works__item-description {
   margin: 10px 0 0;
+  text-align: left;
 }
 
 .works__item-technologies {
@@ -104,9 +108,9 @@
 
 .works__item-technology {
   padding: 2px 6px;
-  color: var(--secondary-text-color);
+  color: var(--secondary-text);
   border-radius: 6px;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-background);
 }
 
 .works__area-button {

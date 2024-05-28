@@ -38,7 +38,7 @@
   align-self: center;
   margin: 0 0 -4px;
   padding-bottom: 4px;
-  border-bottom: 4px solid #559BE7;
+  border-bottom: 4px solid var(--secondary-background);
 }
 
 .intro__subtitle {
@@ -52,7 +52,7 @@
 }
 
 .intro__link {
-  color: var(--special-text-color);
+  color: var(--special-text);
 
   &:hover {
     font-weight: 700;

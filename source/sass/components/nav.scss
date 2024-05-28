@@ -24,7 +24,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  border-bottom: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border);
 
   @media (min-width: $tablet) {
     flex-direction: row;
@@ -39,7 +39,7 @@
 }
 
 .nav__item {
-  border-top: 1px solid var(--primary-border-color);
+  border-top: 1px solid var(--primary-border);
 
   @media (min-width: $tablet) {
     border-top: none;
@@ -49,15 +49,18 @@
 .nav__link {
   display: block;
   padding: 20px 0;
-  color: var(--primary-text-color);
+  color: var(--primary-text);
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
 
-  &:hover {
-    opacity: 0.8;
+  &:hover > .nav__link-text {
+    margin-bottom: -4px;
+    padding-bottom: 4px;
+    border-bottom: 4px solid var(--secondary-background);
+    transition: 0.2s;
   }
 
   &:active {
@@ -77,7 +80,7 @@
     right: 0;
     left: 0;
     z-index: 10;
-    background-color: var(--primary-bg-color);
+    background-color: var(--primary-background);
   }
 }
 

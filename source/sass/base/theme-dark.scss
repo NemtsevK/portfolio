@@ -1,19 +1,15 @@
 .theme-dark {
-  --primary-bg-color: #23272F;
-  --secondary-bg-color: #70aae8;
+  --primary-background: #23272F;
+  --secondary-background: #70aae8;
 
-  --primary-text-color: #ffffff;
-  --secondary-text-color: #23272F;
-  --special-text-color: #70aae8;
+  --primary-text: #ffffff;
+  --secondary-text: #23272F;
+  --special-text: #70aae8;
 
-  --primary-border-color: #dddddd;
+  --primary-border: #dddddd;
 
   .header__toggle-theme::before {
     mask-image: url("../images/sprite.svg#light");
-  }
-
-  .contacts__item-link::before {
-    background-color: var(--primary-text-color);
   }
 
   .skills__item-link {
@@ -51,8 +47,11 @@
     }
   }
 
-  .works__item-technology {
-    color: var(--primary-text-color);
+  .works__item-content {
+    color: var(--secondary-text);
   }
 
+  .works__item-technology {
+    color: var(--primary-text);
+  }
 }

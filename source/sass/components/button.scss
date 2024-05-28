@@ -5,21 +5,22 @@
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: var(--secondary-text-color);
+  color: var(--secondary-text);
   text-transform: uppercase;
   border: 0;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-background);
+  transition: 0.2s;
 
   &:hover {
-    color: var(--secondary-bg-color);
-    outline: 2px solid var(--secondary-bg-color);
-    background-color: var(--primary-bg-color);
+    color: var(--secondary-background);
+    outline: 2px solid var(--secondary-background);
+    background-color: var(--primary-background);
     cursor: pointer;
   }
 
   &:active {
-    color: var(--secondary-text-color);
+    color: var(--secondary-text);
     outline: none;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--secondary-background);
   }
 }

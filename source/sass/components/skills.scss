@@ -8,7 +8,8 @@
   display: inline-block;
   margin: 0 auto -4px;
   padding-bottom: 4px;
-  border-bottom: 4px solid #559BE7;
+  text-transform: uppercase;
+  border-bottom: 4px solid var(--secondary-background);
 }
 
 .skills__list {
@@ -26,6 +27,9 @@
   display: flex;
   width: 100px;
   height: 100px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 
   &:hover {
     opacity: 0.8;
@@ -33,62 +37,5 @@
 
   &:active {
     opacity: 0.6;
-  }
-
-  &::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-  }
-
-  &--html::before {
-    background-image: url("../images/icons/html.svg");
-  }
-
-  &--css::before {
-    background-image: url("../images/icons/css.svg");
-  }
-
-  &--sass::before {
-    background-image: url("../images/icons/sass.svg");
-  }
-
-  &--less::before {
-    background-image: url("../images/icons/less.svg");
-  }
-
-  &--js::before {
-    background-image: url("../images/icons/js.svg");
-  }
-
-  &--ts::before {
-    background-image: url("../images/icons/ts.svg");
-  }
-
-  &--react::before {
-    background-image: url("../images/icons/react.svg");
-  }
-
-  &--php::before {
-    background-image: url("../images/icons/php.svg");
-  }
-
-  &--mssql::before {
-    background-image: url("../images/icons/mssql.svg");
-  }
-
-  &--mysql::before {
-    background-image: url("../images/icons/mysql.svg");
-  }
-
-  &--maria-db::before {
-    background-image: url("../images/icons/maria-db.svg");
-  }
-
-  &--figma::before {
-    background-image: url("../images/icons/figma.svg");
   }
 }

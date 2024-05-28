@@ -20,7 +20,8 @@
   display: inline-block;
   margin: 0 0 -4px;
   padding-bottom: 4px;
-  border-bottom: 4px solid #559BE7;
+  text-transform: uppercase;
+  border-bottom: 4px solid var(--secondary-background);
 }
 
 .contacts__list {
@@ -37,32 +38,31 @@
 .contacts__item-link {
   display: flex;
 
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-
   &::before {
     content: "";
     width: 50px;
     height: 50px;
+    background-color: var(--primary-text);
+    transition: 0.2s;
+  }
+
+  &:hover::before {
+    background-color: var(--special-text);
+  }
+
+  &:active::before {
+    background-color: var(--primary-text);
   }
 
   &--mail::before {
-    background-color: #DD2626;
     mask-image: url("../images/sprite.svg#mail");
   }
 
   &--telegram::before {
-    background-color: #2AABEE;
     mask-image: url("../images/sprite.svg#telegram");
   }
 
   &--github::before {
-    background-color: #24292F;
     mask-image: url("../images/sprite.svg#github");
   }
 }
