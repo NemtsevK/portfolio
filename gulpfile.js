@@ -22,7 +22,7 @@ const BUILD_ROOT = 'build';
 const PATH_TO_MARKUP = `${SOURCE_ROOT}/**/*.html`;
 const PATH_TO_STYLE = `${SOURCE_ROOT}/sass/style.scss`;
 const PATH_TO_STYLES = `${SOURCE_ROOT}/sass/**/*.scss`;
-const PATH_TO_SCRIPTS = `${SOURCE_ROOT}/js/*.js`;
+const PATH_TO_SCRIPTS = `${SOURCE_ROOT}/js/**/*.js`;
 const PATH_TO_RASTER = `${SOURCE_ROOT}/images/**/*.{png,jpg}`;
 const PATH_TO_SPRITES = `${SOURCE_ROOT}/images/sprites/*.svg`;
 const PATHS_TO_WEBP = [PATH_TO_RASTER, `!${SOURCE_ROOT}/images/favicons/*.png`];
@@ -39,7 +39,7 @@ const currentDateTimeString = dayjs().format('YYYYMMDDHHmmss');
 const processMarkup = () => {
   return src(PATH_TO_MARKUP)
     .pipe(replace('.css', `.min.css?${currentDateTimeString}`))
-    .pipe(replace('.js', `.min.js?${currentDateTimeString}`))
+    .pipe(replace('.js', `.js?${currentDateTimeString}`))
     .pipe(dest(BUILD_ROOT));
 };
 
@@ -59,7 +59,6 @@ export const processStyles = () => {
 const processScripts = () => {
   return src(PATH_TO_SCRIPTS)
     .pipe(terser())
-    .pipe(rename({ suffix: '.min' }))
     .pipe(dest(`${BUILD_ROOT}/js`))
     .pipe(browser.stream());
 };
