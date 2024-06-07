@@ -1,5 +1,15 @@
 @use "../base/variables" as *;
 
+.main {
+  flex: 1 1 auto;
+
+  &--simple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .main__skills {
   margin-top: 40px;
 

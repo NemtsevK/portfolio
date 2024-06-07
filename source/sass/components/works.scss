@@ -54,13 +54,11 @@
   color: var(--primary-text);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   cursor: pointer;
+  transition: 0.5s;
 
   &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
   }
 }
 
@@ -100,6 +98,7 @@
 
 .works__item-technologies {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 15px 0 0;
   padding: 0;

@@ -14,44 +14,44 @@
 
   .skills__item-link {
 
-    &--html::before {
+    &--html {
       background-image: url("../images/icons/html-alt.svg");
     }
 
-    &--css::before {
+    &--css {
       background-image: url("../images/icons/css-alt.svg");
     }
 
-    &--sass::before {
+    &--sass {
       background-image: url("../images/icons/sass-alt.svg");
     }
 
-    &--react::before {
+    &--react {
       background-image: url("../images/icons/react-alt.svg");
     }
 
-    &--mssql::before {
+    &--mssql {
       background-image: url("../images/icons/mssql-alt.svg");
     }
 
-    &--mysql::before {
+    &--mysql {
       background-image: url("../images/icons/mysql-alt.svg");
     }
 
-    &--maria-db::before {
+    &--maria-db {
       background-image: url("../images/icons/maria-db-alt.svg");
     }
 
-    &--figma::before {
+    &--figma {
       background-image: url("../images/icons/figma-alt.svg");
     }
   }
 
   .works__item-content {
-    color: var(--secondary-text);
+    background-color: rgba(0, 0, 0, 0.8)
   }
 
-  .works__item-technology {
-    color: var(--primary-text);
+  .works__item-link:hover {
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
   }
 }

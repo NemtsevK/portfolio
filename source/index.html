@@ -99,12 +99,24 @@
 </main>
 
 <dialog class="modal">
-  <button id="close">Закрыть окно</button>
-  <h3 class="modal__title"></h3>
-  <p class="modal__description"></p>
-  <p class="modal__about"></p>
-  <a class="modal__link-site" href="" target="_blank" rel="nofollow noopener">Сайт</a>
-  <a class="modal__link-source" href="" target="_blank" rel="nofollow noopener">Исходный код</a>
+  <div class="modal__inner">
+    <div class="modal__header">
+      <h3 class="modal__title"></h3>
+      <button class="modal__close" title="Закрыть окно" aria-label="Закрыть окно"></button>
+    </div>
+    <div class="modal__content">
+      <a class="modal__link-image" href="" title="Сайт" aria-label="Сайт" target="_blank" rel="nofollow noopener">
+        <img class="modal__image" src="" alt="">
+      </a>
+      <p class="modal__description"></p>
+      <ul class="modal__technologies"></ul>
+      <div class="modal__about"></div>
+    </div>
+    <div class="modal__footer">
+      <a class="modal__link modal__link--site" href="" title="Сайт" aria-label="Сайт" target="_blank" rel="nofollow noopener"></a>
+      <a class="modal__link modal__link--source" href="" title="Исходный код" aria-label="Исходный код" target="_blank" rel="nofollow noopener"></a>
+    </div>
+  </div>
 </dialog>
 
 <template id="skill">
@@ -115,16 +127,14 @@
 
 <template id="work">
   <li class="works__item">
-    <label class="works__item-link">
+    <label class="works__item-link" title="Подробнее">
       <div class="works__item-content">
         <h3 class="works__item-title title-h2"></h3>
         <p class="works__item-description"></p>
         <ul class="works__item-technologies"></ul>
       </div>
       <div class="works__item-picture">
-        <picture>
-          <img class="works__item-image" src="" alt="">
-        </picture>
+        <img class="works__item-image" src="" alt="">
       </div>
       <input class="works__item-input" name="work" type="hidden" value="">
     </label>

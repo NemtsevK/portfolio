@@ -1,8 +1,158 @@
 .modal {
-  padding: 20px;
-  border: 1px solid #000000;
+  max-width: 1000px;
+  max-height: 100%;
+  padding: 0;
+  border: none;
+  color: var(--primary-text);
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
-.modal::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+.modal__inner {
+  padding: 20px;
+  background-color: var(--primary-background);
+  border: 1px solid var(--primary-border);
+}
+
+.modal__header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 0 20px;
+  gap: 20px;
+  border-bottom: 1px solid var(--primary-border);
+}
+
+.modal__title {
+  flex: 1 0 auto;
+  margin: 0;
+  text-align: center;
+}
+
+.modal__close {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask-image: url("../images/sprite.svg#close");
+    background-color: var(--primary-text);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+  }
+
+  &:hover::before {
+    background-color: var(--special-text);
+    transition: 0.2s;
+  }
+
+  &:active::before {
+    background-color: var(--primary-text);
+    opacity: 0.6;
+  }
+}
+
+.modal__content {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--primary-border);
+}
+
+.modal__description {
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+.modal__about {
+  margin: 20px 0 0;
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0 0;
+}
+
+.modal__link {
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-text);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+  }
+
+  &:hover::before {
+    background-color: var(--special-text);
+  }
+
+  &:active::before {
+    background-color: var(--primary-text);
+    opacity: 0.6;
+  }
+
+  &--site::before {
+    mask-image: url("../images/sprite.svg#web-site");
+  }
+
+  &--source::before {
+    mask-image: url("../images/sprite.svg#github");
+  }
+}
+
+.modal__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 15px 0 0;
+  padding: 0;
+  list-style: none
+}
+
+.modal__technology {
+  padding: 2px 6px;
+  color: var(--secondary-text);
+  border-radius: 6px;
+  background-color: var(--secondary-background)
+}
+
+.modal__link-image {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.modal__link-image:hover {
+  transform: scale(1.05);
+}
+
+.modal__image {
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
