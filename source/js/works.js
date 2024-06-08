@@ -44,6 +44,6 @@ const onButtonShowClick = () => {
   button.textContent = (showItems === true) ? 'Скрыть' : 'Показать больше';
 }
 
-button.addEventListener('click', onButtonShowClick);
+button?.addEventListener('click', onButtonShowClick);
 
 export { initWorksContainer }
