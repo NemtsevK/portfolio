@@ -11,4 +11,3 @@ initSkillsContainer();
 initWorksContainer();
 setTheme();
 initModal();
-

@@ -98,46 +98,30 @@
   </section>
 </main>
 
-<dialog class="modal">
-  <div class="modal__inner">
-    <div class="modal__header">
-      <h3 class="modal__title"></h3>
-      <button class="modal__close" title="Закрыть окно" aria-label="Закрыть окно"></button>
-    </div>
-    <div class="modal__content">
-      <a class="modal__link-image" href="" title="Сайт" aria-label="Сайт" target="_blank" rel="nofollow noopener">
-        <img class="modal__image" src="" alt="">
-      </a>
-      <p class="modal__description"></p>
-      <ul class="modal__technologies"></ul>
-      <div class="modal__about"></div>
-    </div>
-    <div class="modal__footer">
-      <a class="modal__link modal__link--site" href="" title="Сайт" aria-label="Сайт" target="_blank" rel="nofollow noopener"></a>
-      <a class="modal__link modal__link--source" href="" title="Исходный код" aria-label="Исходный код" target="_blank" rel="nofollow noopener"></a>
-    </div>
-  </div>
-</dialog>
-
 <template id="skill">
   <li class="skills__item">
-    <a class="skills__item-link" href="" target="_blank" rel="nofollow"></a>
+    <a class="skills__item-link" href="" target="_blank" rel="nofollow noopener"></a>
   </li>
 </template>
 
 <template id="work">
-  <li class="works__item">
-    <label class="works__item-link" title="Подробнее">
-      <div class="works__item-content">
-        <h3 class="works__item-title title-h2"></h3>
-        <p class="works__item-description"></p>
-        <ul class="works__item-technologies"></ul>
+  <li class="works__item work" tabindex="0">
+    <div class="work__content">
+      <h3 class="work__title title-h2"></h3>
+      <p class="work__description"></p>
+      <ul class="work__technologies"></ul>
+      <div class="work__about"></div>
+    </div>
+    <div class="work__footer">
+      <a class="work__button work__button--site" href="" title="Сайт" aria-label="Сайт" target="_blank" rel="nofollow noopener"></a>
+      <a class="work__button work__button--source" href="" title="Исходный код" aria-label="Исходный код" target="_blank" rel="nofollow noopener"></a>
+      <button class="work__button work__button--close" title="Свернуть" aria-label="Свернуть"></button>
+    </div>
+    <div class="work__picture-wrapper">
+      <div class="work__picture">
+        <img class="work__image" src="" alt="">
       </div>
-      <div class="works__item-picture">
-        <img class="works__item-image" src="" alt="">
-      </div>
-      <input class="works__item-input" name="work" type="hidden" value="">
-    </label>
+    </div>
   </li>
 </template>
 
