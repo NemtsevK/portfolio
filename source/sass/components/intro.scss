@@ -1,9 +1,5 @@
 @use "../base/variables" as *;
 
-.intro {
-
-}
-
 .intro__container {
   display: grid;
   justify-content: center;
@@ -43,7 +39,6 @@
 
 .intro__subtitle {
   align-self: center;
-  //grid-column: 1;
   font-weight: 700;
 }
 

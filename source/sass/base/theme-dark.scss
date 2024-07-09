@@ -1,11 +1,9 @@
 .theme-dark {
   --primary-background: #23272f;
   --secondary-background: #70aae8;
-
   --primary-text: #ffffff;
   --secondary-text: #23272f;
   --special-text: #70aae8;
-
   --primary-border: #dddddd;
 
   .header__toggle-theme::before {
@@ -13,7 +11,6 @@
   }
 
   .skills__item-link {
-
     &--html {
       background-image: url("../images/icons/html-alt.svg");
     }
@@ -48,10 +45,10 @@
   }
 
   .works__item-content {
-    background-color: rgba(0, 0, 0, 0.8)
+    background-color: rgba(0, 0, 0, 80%);
   }
 
   .works__item-link:hover {
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 40%);
   }
 }

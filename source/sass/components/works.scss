@@ -25,13 +25,13 @@
   padding: 0;
   list-style: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: $desktop) {
     grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -19,7 +19,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  flex-wrap: wrap;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -72,8 +71,7 @@
   }
 }
 
-@media (max-width: calc($tablet - 1px)) {
-
+@media (max-width: $tablet - 1px) {
   .nav--opened .nav__list {
     position: absolute;
     top: 20px;

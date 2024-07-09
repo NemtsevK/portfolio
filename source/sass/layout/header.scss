@@ -16,7 +16,6 @@
 }
 
 .header__logo {
-
   &::before {
     content: "";
     display: block;
@@ -29,6 +28,7 @@
   &[href]:hover {
     opacity: 0.8;
   }
+
   &[href]:active {
     opacity: 0.6;
   }
@@ -95,7 +95,6 @@
     cursor: pointer;
     opacity: 0.3;
   }
-
 }
 
 .header__toggle-nav-checkbox:checked + .header__toggle-nav-inner {
