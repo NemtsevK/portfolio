@@ -1,3 +1,4 @@
+import { wrapGrid } from "https://cdn.skypack.dev/animate-css-grid@latest";
 import { works } from './data/works.js';
 
 function initWorksContainer() {
@@ -40,8 +41,6 @@ function initWorksContainer() {
   worksContainer.appendChild(worksFragment);
 
   worksContainer.addEventListener('click', (event) => {
-
-
     const targetElement = event.target;
     const workElement = targetElement.closest('.work');
     const workButtonClose = targetElement.closest('.work__button--close');
@@ -49,10 +48,7 @@ function initWorksContainer() {
     if (workButtonClose) {
       fadeOut(workElement.querySelector('.work__about'), 250);
       fadeOut(workElement.querySelector('.work__footer'), 250);
-
-      setTimeout(() => {
-        workElement.classList.remove('work--active');
-      }, 250);
+      workElement.classList.remove('work--active');
 
       return;
     }
@@ -60,23 +56,20 @@ function initWorksContainer() {
     if (workElement) {
       fadeIn(workElement.querySelector('.work__about'), 250);
       fadeIn(workElement.querySelector('.work__footer'), 250, 'flex');
-
       const workElementActive = worksContainer.querySelector('.work--active');
 
       if (workElementActive) {
         fadeOut(workElementActive.querySelector('.work__about'), 250);
         fadeOut(workElementActive.querySelector('.work__footer'), 250);
-
-        setTimeout(() => {
-          workElementActive.classList.remove('work--active');
-        }, 250);
+        workElementActive.classList.remove('work--active');
       }
 
       workElement.classList.add('work--active');
     }
   })
-}
 
+  wrapGrid(worksContainer);
+}
 
 /**
  * плавное появление элемента
