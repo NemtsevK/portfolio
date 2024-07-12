@@ -49,11 +49,10 @@ function initWorksContainer() {
       fadeOut(workElement.querySelector('.work__about'), 250);
       fadeOut(workElement.querySelector('.work__footer'), 250);
       workElement.classList.remove('work--active');
-
       return;
     }
 
-    if (workElement) {
+    if (workElement && workElement.classList.contains('work--active') === false) {
       fadeIn(workElement.querySelector('.work__about'), 250);
       fadeIn(workElement.querySelector('.work__footer'), 250, 'flex');
       const workElementActive = worksContainer.querySelector('.work--active');
