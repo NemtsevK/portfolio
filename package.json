@@ -1,9 +1,9 @@
 {
   "name": "portfolio",
-  "author": "Nemtsev Konstantin <nemtsevk@hotmail.com> (https://github.com/nemtsev-k)",
-  "description": "Портфолио Немцев Константина",
+  "author": "Nemtsev Konstantin <nemtsevk@hotmail.com> (https://github.com/NemtsevK)",
+  "description": "Портфолио Немцева Константина",
   "homepage": "http://nemtsevk.ru",
-  "repository": "https://github.com/nemtsev-k/portfolio",
+  "repository": "https://github.com/NemtsevK/portfolio",
   "private": true,
   "type": "module",
   "devDependencies": {
@@ -57,7 +57,7 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "^20.14.0",
-    "npm": "^10.7.0"
+    "node": "^20.15.1",
+    "npm": "^10.8.2"
   }
 }
