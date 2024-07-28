@@ -73,4 +73,16 @@ export const skills = [
     link: 'https://www.figma.com/',
     darkTheme: true,
   },
+  {
+    name: 'Векторный графический редактор Adobe Illustrator',
+    image: `${IMAGE_PATH}/illustrator.svg`,
+    link: 'https://www.adobe.com/products/illustrator.html',
+    darkTheme: false,
+  },
+  {
+    name: 'Растровый графический редактор Adobe Photoshop',
+    image: `${IMAGE_PATH}/photoshop.svg`,
+    link: 'https://www.adobe.com/products/photoshop.html',
+    darkTheme: false,
+  },
 ];

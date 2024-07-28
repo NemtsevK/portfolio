@@ -3,25 +3,6 @@
 
 .page {
   height: 100%;
-  scrollbar-gutter: stable;
-
-  &--nojs {
-    .header__toggle-nav {
-      @include visually-hidden;
-    }
-
-    .header__toggle-theme {
-      grid-column: 3;
-    }
-
-    @media (max-width: $tablet - 1px) {
-      .nav {
-        margin-top: 20px;
-        position: static;
-        display: block;
-      }
-    }
-  }
 }
 
 .page__body {
@@ -38,6 +19,7 @@
 
   &--scroll-lock {
     overflow: hidden;
+    scrollbar-gutter: stable;
   }
 }
 
