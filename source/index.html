@@ -18,100 +18,105 @@
 </head>
 <body class="page__body">
 <header class="header">
-  <div class="header__container container">
-    <div class="header__logo"></div>
-    <label class="header__toggle-theme" title="Тёмная тема" aria-label="Переключиться на тёмную тему">
-      <input class="header__toggle-theme-checkbox visually-hidden" type="checkbox">
-    </label>
-    <label class="header__toggle-nav" aria-label="Открыть меню">
-      <input class="header__toggle-nav-checkbox visually-hidden" type="checkbox">
-      <span class="header__toggle-nav-inner"></span>
-    </label>
-    <nav class="header__nav nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="#skills">
-            <span class="nav__link-text">Навыки</span>
-          </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#works">
-            <span class="nav__link-text">Проекты</span>
-          </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#contacts">
-            <span class="nav__link-text">Контакты</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+  <div class="container">
+    <div class="header__container"><!--header__inner-->
+      <div class="header__logo"></div>
+      <button class="header__toggle-theme" title="Тёмная тема" aria-label="Переключиться на тёмную тему"></button>
+      <label class="header__toggle-nav" aria-label="Открыть меню"><!--change-->
+        <input class="header__toggle-nav-checkbox visually-hidden" type="checkbox">
+        <span class="header__toggle-nav-inner"></span>
+      </label>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#skills">
+              <span class="nav__link-text">Навыки</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#works">
+              <span class="nav__link-text">Проекты</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contacts">
+              <span class="nav__link-text">Контакты</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
-<main class="page__main main">
-  <section class="intro">
-    <div class="container intro__container">
-      <div class="intro__content">
-        <h1 class="intro__title title-h1">Константин Немцев</h1>
-        <span class="intro__subtitle">Фуллстек-разработчик</span>
-        <p class="intro__description">Имею 5-летний опыт разработки как фронтенд, так и бекенд части веб-сайта с использованием HTML, CSS, Sass, Less, JavaScript, PHP и SQL. Умею рисовать растровую и векторную графику с помощью Photoshop, Illustrator и Figma. Есть опыт разработки на React и TypeScript.</p>
-        <p class="intro__description">Закончил магистратуру в <a class="intro__link" href="https://www.volgatech.net/" target="_blank">Поволжском государственном технологическом университете</a> по направлению «Информатика и вычислительная техника».</p>
-        <p class="intro__description">Прошёл 4 онлайн курса по фронтенд-разработке в <a class="intro__link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>.</p>
+<main class="main">
+  <div class="container">
+    <section class="main__intro intro">
+      <div class="intro__inner">
+        <div class="intro__content">
+          <h1 class="intro__title title-h1">Константин Немцев</h1>
+          <span class="intro__subtitle">Фуллстек-разработчик</span>
+          <p class="intro__description">Имею 5-летний опыт разработки как фронтенд, так и бекенд части веб-сайта с использованием HTML, CSS, Sass, Less, JavaScript, PHP и SQL. Умею рисовать растровую и векторную графику с помощью Photoshop, Illustrator и Figma. Есть опыт разработки на React и TypeScript.</p>
+          <p class="intro__description">Закончил магистратуру в <a class="intro__link" href="https://www.volgatech.net/" target="_blank">Поволжском государственном технологическом университете</a> по направлению «Информатика и вычислительная техника».</p>
+          <p class="intro__description">Прошёл 4 онлайн курса по фронтенд-разработке в <a class="intro__link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>.</p>
+        </div>
+        <div class="intro__picture">
+          <picture>
+            <img class="intro__image" src="images/content/photo.jpg" alt="">
+          </picture>
+        </div>
       </div>
-      <div class="intro__picture">
-        <picture>
-          <img class="intro__image" src="images/content/photo.jpg" width="300" alt="">
-        </picture>
+    </section>
+    <section class="main__skills skills" id="skills">
+      <div class="skills__inner">
+        <h2 class="skills__title title-h1">Навыки</h2>
+        <ul class="skills__list"></ul>
       </div>
-    </div>
-  </section>
-  <section class="main__skills skills" id="skills">
-    <div class="skills__container container">
-      <h2 class="skills__title title-h1">Навыки</h2>
-      <ul class="skills__list"></ul>
-    </div>
-  </section>
-  <section class="main__works works" id="works">
-    <div class="works__container container">
-      <h2 class="works__title title-h1">Проекты</h2>
-      <ul class="works__list"></ul>
-<!--      <div class="works__area-button">-->
-<!--        <button class="works__button button" type="button">Показать больше</button>-->
-<!--      </div>-->
-    </div>
-  </section>
-  <section class="main__contacts contacts" id="contacts">
-    <div class="contacts__container container">
-      <h2 class="contacts__title title-h1">Контакты</h2>
-      <ul class="contacts__list">
-        <li class="contacts__item">
-          <a class="contacts__item-link contacts__item-link--mail" href="mailto:nemtsevk@hotmail.com" title="Моя электронная почта" aria-label="Моя электронная почта" target="_blank" rel="nofollow noopener"></a>
-        </li>
-        <li class="contacts__item">
-          <a class="contacts__item-link contacts__item-link--telegram" href="https://t.me/nemtsev_k" title="Мой профиль в Телеграм" aria-label="Мой профиль в Телеграм" target="_blank" rel="nofollow noopener"></a>
-        </li>
-        <li class="contacts__item">
-          <a class="contacts__item-link contacts__item-link--github" href="https://github.com/NemtsevK" title="Моя страница на GitHub" aria-label="Моя страница на GitHub" target="_blank" rel="nofollow noopener"></a>
-        </li>
-      </ul>
-    </div>
-  </section>
+    </section>
+    <section class="main__works works" id="works">
+      <div class="works__inner">
+        <h2 class="works__title title-h1">Проекты</h2>
+        <div class="works__list"></div>
+        <!--      <div class="works__area-button">-->
+        <!--        <button class="works__button button" type="button">Показать больше</button>-->
+        <!--      </div>-->
+      </div>
+    </section>
+    <section class="main__contacts contacts" id="contacts">
+      <div class="contacts__inner">
+        <h2 class="contacts__title title-h1">Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a class="contacts__item-link contacts__item-link--mail" href="mailto:nemtsevk@hotmail.com" title="Моя электронная почта" aria-label="Моя электронная почта" target="_blank" rel="nofollow noopener"></a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__item-link contacts__item-link--telegram" href="https://t.me/nemtsev_k" title="Мой профиль в Телеграм" aria-label="Мой профиль в Телеграм" target="_blank" rel="nofollow noopener"></a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__item-link contacts__item-link--github" href="https://github.com/NemtsevK" title="Моя страница на GitHub" aria-label="Моя страница на GitHub" target="_blank" rel="nofollow noopener"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
 </main>
-
+<footer class="footer">
+  <div class="container">
+    <div class="footer__copyright">&copy; Немцев Константин, 2024 г.</div>
+  </div>
+</footer>
 <template id="skill">
   <li class="skills__item">
-    <a class="skills__item-link" href="" target="_blank" rel="nofollow noopener"></a>
+    <button class="skills__item-button" name=""></button>
   </li>
 </template>
-
 <template id="work">
-  <li class="works__item work" tabindex="0">
+  <div class="works__item work" tabindex="0">
     <div class="work__inner">
       <div class="work__content">
         <h3 class="work__title title-h2"></h3>
         <p class="work__description"></p>
         <ul class="work__technologies"></ul>
-        <div class="work__about"></div>
+        <ul class="work__about"></ul>
       </div>
       <div class="work__footer">
         <a class="work__button work__button--site" href="" title="Сайт" aria-label="Сайт" target="_blank" rel="nofollow noopener"></a>
@@ -122,10 +127,16 @@
         <img class="work__image" src="" alt="">
       </div>
     </div>
-
-  </li>
+  </div>
 </template>
-
-<script src="js/main.js" type="module"></script>
+<dialog class="modal" id="modal" aria-label="Информация">
+  <div class="modal__inner">
+    <button class="modal__close"></button>
+    <img class="modal__image" src="" width="100" height="100" alt="">
+    <h3 class="modal__title"></h3>
+    <ul class="modal__about"></ul>
+  </div>
+</dialog>
+<script src="js/index.js" type="module"></script>
 </body>
 </html>

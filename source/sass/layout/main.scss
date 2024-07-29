@@ -10,6 +10,12 @@
   }
 }
 
+.main__intro {
+  @media (min-width: $tablet) {
+    margin-top: 20px;
+  }
+}
+
 .main__skills {
   margin-top: 40px;
 

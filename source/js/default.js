@@ -1,5 +1,3 @@
-import { setTheme } from './theme.js';
-import { initMenu } from './nav.js';
+import { initTheme } from './theme.js';
 
-initMenu();
-setTheme();
+initTheme();

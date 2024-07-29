@@ -3,6 +3,11 @@
 
 .page {
   height: 100%;
+
+  &--scroll-lock {
+    overflow-y: hidden;
+    scrollbar-gutter: stable;
+  }
 }
 
 .page__body {
@@ -16,15 +21,4 @@
   font-weight: 400;
   color: var(--primary-text);
   background-color: var(--primary-background);
-
-  &--scroll-lock {
-    overflow: hidden;
-    scrollbar-gutter: stable;
-  }
-}
-
-.page__main {
-  @media (min-width: $tablet) {
-    margin-top: 10px;
-  }
 }

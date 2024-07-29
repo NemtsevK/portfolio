@@ -1,32 +1,42 @@
-import { replaceSkillsImage } from './skills.js';
+import { setSkillsImage } from './skills.js';
 
-const page = document.querySelector('.page');
-const toggleTheme = page.querySelector('.header__toggle-theme');
-const toggleThemeInput = page.querySelector('.header__toggle-theme-checkbox');
+/**
+ * инициализация темы сайта
+ */
+function initTheme() {
+  const toggleTheme = document.querySelector('.header__toggle-theme');
 
-const onToggleThemeClick = (event) => {
-  const themeName = event.target.checked ? 'dark' : 'light';
-  window.localStorage.setItem('theme', themeName);
-  setTheme();
+  const onToggleThemeClick = (event) => {
+    const isDarkTheme = window.localStorage.getItem('theme') === 'dark';
+    const themeName = isDarkTheme === true ? 'light' : 'dark';
+
+    window.localStorage.setItem('theme', themeName);
+    setTheme(event.target);
+  }
+
+  setTheme(toggleTheme);
+  toggleTheme.addEventListener('click', onToggleThemeClick);
 }
 
-toggleThemeInput.addEventListener('click', onToggleThemeClick);
-
-function setTheme() {
+/**
+ * активизировать тему сайта
+ * @param toggle
+ */
+function setTheme(toggle) {
+  const page = document.querySelector('.page');
   const isDarkTheme = window.localStorage.getItem('theme') === 'dark';
   const titleText = isDarkTheme === true ? 'Переключиться на светлую тему' : 'Переключиться на тёмную тему';
 
-  if (isDarkTheme) {
+  if (isDarkTheme === true) {
     page.classList.add('theme-dark');
   } else {
     page.classList.remove('theme-dark');
   }
 
-  toggleThemeInput.checked = isDarkTheme;
-  replaceSkillsImage(isDarkTheme);
+  toggle.setAttribute('aria-label', titleText);
+  toggle.setAttribute('title', titleText);
 
-  toggleTheme.setAttribute('aria-label', titleText);
-  toggleTheme.setAttribute('title', titleText);
+  setSkillsImage();
 }
 
-export { setTheme }
+export { initTheme }

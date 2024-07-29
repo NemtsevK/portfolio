@@ -1,18 +1,20 @@
 import { wrapGrid } from "https://cdn.skypack.dev/animate-css-grid@latest";
 import { works } from './data/works.js';
 
+/**
+ * инициализация контейнера с проектами
+ */
 function initWorksContainer() {
   const worksContainer = document.querySelector('.works__list');
   const workTemplate = document.querySelector('#work').content;
   const workItem = workTemplate.querySelector('.works__item');
   const worksFragment = document.createDocumentFragment();
 
-  works.forEach((work) => {
-    const { title, description, image, about, site, technologies, source } = work;
+  works.forEach(({ title, description, image, about, site, technologies, source }) => {
     const workElement = workItem.cloneNode(true);
+    const workTechnologies = workElement.querySelector('.work__technologies');
+    const workAbout = workElement.querySelector('.work__about');
 
-    const workTechnologies = workElement.querySelector('.work__technologies')
-    const workAbout = workElement.querySelector('.work__about')
     workElement.querySelector('.work__title').innerText = title;
     workElement.querySelector('.work__description').innerText = description;
     workElement.querySelector('.work__image').src = image;
@@ -22,7 +24,7 @@ function initWorksContainer() {
     workElement.querySelector('.work__button--source').href = source;
 
     about.forEach((item) => {
-      const itemElement = document.createElement('p');
+      const itemElement = document.createElement('li');
       itemElement.classList.add('work__about-item');
       itemElement.innerText = item;
       workAbout.appendChild(itemElement);
@@ -40,34 +42,48 @@ function initWorksContainer() {
 
   worksContainer.appendChild(worksFragment);
 
-  worksContainer.addEventListener('click', (event) => {
-    const targetElement = event.target;
-    const workElement = targetElement.closest('.work');
-    const workButtonClose = targetElement.closest('.work__button--close');
+
+  const onWorksContainerClick = (event) => {
+    const workElement = event.target.closest('.work');
+    const workButtonClose = event.target.closest('.work__button--close');
 
     if (workButtonClose) {
-      fadeOut(workElement.querySelector('.work__about'), 250);
-      fadeOut(workElement.querySelector('.work__footer'), 250);
       workElement.classList.remove('work--active');
       return;
     }
 
-    if (workElement && workElement.classList.contains('work--active') === false) {
-      fadeIn(workElement.querySelector('.work__about'), 250);
-      fadeIn(workElement.querySelector('.work__footer'), 250, 'flex');
-      const workElementActive = worksContainer.querySelector('.work--active');
+    showActiveContainer(workElement, worksContainer);
+  }
 
-      if (workElementActive) {
-        fadeOut(workElementActive.querySelector('.work__about'), 250);
-        fadeOut(workElementActive.querySelector('.work__footer'), 250);
-        workElementActive.classList.remove('work--active');
-      }
-
-      workElement.classList.add('work--active');
+  const onWorksContainerKeyUp = (event) => {
+    if(event.code === 'Enter') {
+      showActiveContainer(event.target, worksContainer);
     }
-  })
+  }
 
-  wrapGrid(worksContainer);
+  worksContainer.addEventListener('click', onWorksContainerClick);
+  worksContainer.addEventListener('keyup', onWorksContainerKeyUp);
+}
+
+/**
+ * контейнера с проектом сделать активным
+ * @param workElement
+ * @param worksContainer
+ */
+function showActiveContainer(workElement, worksContainer) {
+  if (workElement && workElement.classList.contains('work--active') === false) {
+    const workElementActive = worksContainer.querySelector('.work--active');
+
+    if (workElementActive) {
+      workElementActive.classList.remove('work--active');
+      workElementActive.tabIndex = '0';
+    }
+
+    workElement.classList.add('work--active');
+    workElement.tabIndex = '-1';
+
+    wrapGrid(worksContainer);
+  }
 }
 
 /**

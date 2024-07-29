@@ -1,5 +1,9 @@
 const IMAGE_PATH = 'images/content';
 
+/**
+ *
+ * @type {({technologies: string[], image: string, site: string, visible: boolean, about: string[], description: string, id: string, source: string, title: string)[]}
+ */
 export const works = [
   {
     id: 'cat-energy',

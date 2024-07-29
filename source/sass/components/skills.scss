@@ -1,6 +1,6 @@
 @use "../base/variables" as *;
 
-.skills__container {
+.skills__inner {
   text-align: center;
 }
 
@@ -23,13 +23,16 @@
   list-style: none;
 }
 
-.skills__item-link {
-  display: flex;
+.skills__item-button {
   width: 100px;
   height: 100px;
+  padding: 0;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+  border: none;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
@@ -37,5 +40,9 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 4px solid var(--secondary-background);
   }
 }
