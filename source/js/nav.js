@@ -1,20 +1,31 @@
-export function initMenu() {
-  const nav = document.querySelector('.nav');
-  const toggleNavInput = document.querySelector('.header__toggle-nav-checkbox');
-  const navLinks = nav.querySelectorAll('.nav__link');
+/**
+ * инициализация меню навигации
+ */
+function initMenu() {
+  const pattern = /(header)+/;
+  const page = document.querySelector('.page');
+  const header = page.querySelector('.header');
 
-  const onToggleNavClick = (event) => {
+  const nav = page.querySelector('.nav');
+  const navToggle = header.querySelector('.header__toggle-nav');
+
+  const toggleMenu = () => {
+    const isClosed = nav.classList.toggle('nav--closed');
     nav.classList.toggle('nav--opened');
-    const textToggleNav = event.target.checked ? 'Закрыть меню' : 'Открыть меню';
-    toggleNavInput.setAttribute('aria-label', textToggleNav);
+    navToggle.classList.toggle('header__toggle-nav--active');
+    navToggle.setAttribute('aria-label', isClosed ? 'Открыть меню' : 'Закрыть меню');
   }
 
-  const onNavLinkClick = () => {
-    nav.classList.toggle('nav--opened');
-    toggleNavInput.checked = false;
+  const onPageClick = ({ target }) => {
+    if (pattern.test(target.className) === false && nav.classList.contains('nav--opened')) {
+      toggleMenu();
+    }
   }
 
-  toggleNavInput.addEventListener('click', onToggleNavClick);
+  const onNavToggleClick = () => toggleMenu();
 
-  navLinks.forEach(navLink => navLink.addEventListener('click', onNavLinkClick));
+  navToggle.addEventListener('click', onNavToggleClick);
+  page.addEventListener('click', onPageClick);
 }
+
+export { initMenu }

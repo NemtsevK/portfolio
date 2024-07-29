@@ -4,7 +4,7 @@
   padding: 30px 0 20px;
 }
 
-.header__container {
+.header__inner {
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: center;
@@ -89,23 +89,26 @@
   border: none;
   outline: none;
   background-color: transparent;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     display: none;
   }
 
   &:hover {
-    cursor: pointer;
     opacity: 0.6;
   }
 
   &:active {
-    cursor: pointer;
     opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: 4px solid var(--secondary-background);
   }
 }
 
-.header__toggle-nav-checkbox:checked + .header__toggle-nav-inner {
+.header__toggle-nav--active > .header__toggle-nav-inner {
   background-color: transparent;
 
   &::before {

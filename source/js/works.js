@@ -56,7 +56,7 @@ function initWorksContainer() {
   }
 
   const onWorksContainerKeyUp = (event) => {
-    if(event.code === 'Enter') {
+    if (event.code === 'Enter') {
       showActiveContainer(event.target, worksContainer);
     }
   }
@@ -81,39 +81,8 @@ function showActiveContainer(workElement, worksContainer) {
 
     workElement.classList.add('work--active');
     workElement.tabIndex = '-1';
-
     wrapGrid(worksContainer);
   }
-}
-
-/**
- * плавное появление элемента
- * @param element
- * @param timeout
- * @param display
- */
-function fadeIn(element, timeout, display) {
-  element.style.opacity = '0';
-  element.style.display = display || 'block';
-  element.style.transition = `opacity ${timeout}ms`;
-  setTimeout(() => {
-    element.style.opacity = '1';
-  }, 10);
-}
-
-/**
- * плавное исчезание элемента
- * @param element
- * @param timeout
- */
-function fadeOut(element, timeout) {
-  element.style.opacity = '1';
-  element.style.transition = `opacity ${timeout}ms`;
-  element.style.opacity = '0';
-
-  setTimeout(() => {
-    element.style.display = 'none'
-  }, timeout);
 }
 
 export { initWorksContainer }
