@@ -67,7 +67,7 @@
   }
 
   &:focus-visible {
-    outline: 4px solid var(--secondary-background);
+    outline: 4px solid var(--focus);
   }
 
   @media (min-width: $tablet) {

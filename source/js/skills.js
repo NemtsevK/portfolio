@@ -17,28 +17,36 @@ function initSkillsContainer() {
   }
 
   skills.forEach((skill) => {
-    const { name, title, image } = skill;
+    const { name, title, about } = skill;
     const skillElement = skillItem.cloneNode(true);
-    skillElement.querySelector('.skills__item-button').name = name;
-    skillElement.querySelector('.skills__item-button').title = title;
-    skillElement.querySelector('.skills__item-button').ariaLabel = name;
-    skillElement.querySelector('.skills__item-button').style.backgroundImage = `url("${image}")`;
+    const imagePath = getImagePath(skill);
+
+    const tagName = about === false ? 'div' : 'button';
+    const className = about === false ? 'skills__item-picture' : 'skills__item-button';
+    const skillPicture = document.createElement(tagName);
+
+    skillPicture.classList.add(className);
+    if(about !== false) {
+      skillPicture.name = name;
+    }
+    skillPicture.title = title;
+    skillPicture.ariaLabel = name;
+    skillPicture.style.backgroundImage = `url("${imagePath}")`;
+
+    skillElement.appendChild(skillPicture);
     skillsFragment.appendChild(skillElement);
   });
 
   skillsContainer.appendChild(skillsFragment);
   skillsContainer.addEventListener('click', onSkillsContainerClick);
-
-  setSkillsImage();
 }
 
 /**
  * активизация модального окна
- * @param title
- * @param image
- * @param about
+ * @param skill
  */
-function setModal({ title, image, about }) {
+function setModal(skill) {
+  const { title, image, about } = skill;
   const page = document.querySelector('.page');
   const modal = document.querySelector('.modal');
   const modalImage = modal.querySelector('.modal__image');
@@ -69,7 +77,7 @@ function setModal({ title, image, about }) {
 
   page.classList.add('page--scroll-lock');
   modal.showModal();
-  modalImage.src = image;
+  modalImage.src = getImagePath(skill);
   modalImage.alt = title;
   modalTitle.innerText = title;
 
@@ -89,20 +97,24 @@ function setModal({ title, image, about }) {
  * установить картинки навыков
  */
 function setSkillsImage() {
-  const isDarkTheme = window.localStorage.getItem('theme') === 'dark';
-  const skillsElements = document.querySelectorAll('.skills__item-button');
+  const skillsElements = document.querySelectorAll('.skills__item-button, .skills__item-picture');
 
   skillsElements.forEach((skillElement, index) => {
-    let imagePath;
-
-    if (isDarkTheme === true && skills[index].darkTheme === true) {
-      imagePath = skills[index].image.replace(/(\w+)\.svg$/, '$1-dark.svg');
-    } else {
-      imagePath = skills[index].image;
-    }
-
+    const imagePath = getImagePath(skills[index]);
     skillElement.style.backgroundImage = `url("${imagePath}")`;
   });
+}
+
+/**
+ *
+ * @param skill
+ * @return string
+ */
+function getImagePath(skill) {
+  const { image, darkTheme } = skill;
+  const isDarkTheme = window.localStorage.getItem('theme') === 'dark';
+
+  return (isDarkTheme === true && darkTheme === true) ? image.replace(/(\w+)\.svg$/, '$1-dark.svg') : image;
 }
 
 export { initSkillsContainer, setSkillsImage }

@@ -33,9 +33,10 @@
   background-position: center;
   border: none;
   cursor: pointer;
+  transition: 0.2s;
 
   &:hover {
-    opacity: 0.8;
+    transform: scale(1.05);
   }
 
   &:active {
@@ -43,6 +44,15 @@
   }
 
   &:focus-visible {
-    outline: 4px solid var(--secondary-background);
+    outline: 4px solid var(--focus);
   }
+}
+
+.skills__item-picture {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }

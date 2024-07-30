@@ -6,17 +6,23 @@
   overflow: hidden;
   text-decoration: none;
   color: var(--primary-text);
-  outline: 2px solid var(--primary-border);
+  border: 2px solid var(--primary-border);
   border-radius: 20px;
-}
+  transition: 0.2s;
 
-.work:hover:not(.work--active) {
-  outline: 2px solid var(--secondary-background);
-  cursor: pointer;
-}
+  &:focus-visible:not(.work--active) {
+    border: 2px solid var(--primary-background);
+    outline: 4px solid var(--focus);
+  }
 
-.work:focus-visible:not(.work--active) {
-  outline: 4px solid var(--secondary-background);
+  &:hover:not(.work--active) {
+    border: 2px solid var(--focus);
+    cursor: pointer;
+  }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .work__inner {
@@ -120,7 +126,7 @@
 }
 
 .work__button:focus-visible {
-  outline: 4px solid var(--secondary-background);
+  outline: 4px solid var(--focus);
 }
 
 .work__button--site::before {
@@ -138,6 +144,7 @@
 .work--active {
   grid-column: span 2;
   grid-row: span 2;
+  border: 2px solid var(--focus);
 
   .work__content {
     margin-top: 200px;
@@ -158,5 +165,33 @@
     gap: 20px;
     padding: 0 20px 20px;
     background-color: rgba(var(--primary-background-rgb), 0.9);
+  }
+}
+
+.works__button {
+  padding: 10px 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-text);
+  background-color: var(--secondary-background);
+  border: 2px solid var(--secondary-background);
+  border-radius: 25px;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--secondary-background);
+    background-color: var(--primary-background);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    border: 2px solid var(--primary-background);
+    outline: 4px solid var(--focus);
   }
 }

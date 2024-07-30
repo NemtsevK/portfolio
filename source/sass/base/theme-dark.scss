@@ -5,44 +5,11 @@
   --primary-text: #ffffff;
   --secondary-text: #23272f;
   --special-text: #70aae8;
-  --primary-border: #dddddd;
+  --primary-border: #aaaaaa;
+  --focus: #70aae8;
 
   .header__toggle-theme::before {
     mask-image: url("../images/sprite.svg#light");
-  }
-
-  .skills__item-link {
-    &--html {
-      background-image: url("../images/icons/html-alt.svg");
-    }
-
-    &--css {
-      background-image: url("../images/icons/css-alt.svg");
-    }
-
-    &--sass {
-      background-image: url("../images/icons/sass-alt.svg");
-    }
-
-    &--react {
-      background-image: url("../images/icons/react-alt.svg");
-    }
-
-    &--mssql {
-      background-image: url("../images/icons/mssql-alt.svg");
-    }
-
-    &--mysql {
-      background-image: url("../images/icons/mysql-alt.svg");
-    }
-
-    &--maria-db {
-      background-image: url("../images/icons/maria-db-alt.svg");
-    }
-
-    &--figma {
-      background-image: url("../images/icons/figma-alt.svg");
-    }
   }
 
   .works__item-content {

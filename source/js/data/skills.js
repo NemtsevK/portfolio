@@ -2,7 +2,7 @@ const IMAGE_PATH = 'images/icons';
 
 /**
  *
- * @type {({image: string, name: string, link: string, about: string[], darkTheme: boolean, title: string})[]}
+ * @type {({image: string, name: string, link: string, about: string[]|boolean, darkTheme: boolean, title: string})[]}
  */
 export const skills = [
   {
@@ -27,6 +27,8 @@ export const skills = [
     darkTheme: true,
     about: [
       'Использование Flexbox и Grid в зависимости от задачи',
+      'Медиазапросы',
+      'Кастомные свойства',
     ],
   },
   {
@@ -35,9 +37,7 @@ export const skills = [
     image: `${IMAGE_PATH}/sass.svg`,
     link: 'https://sass-lang.com/',
     darkTheme: true,
-    about: [
-      '',
-    ],
+    about: false,
   },
   {
     name: 'less',
@@ -45,9 +45,7 @@ export const skills = [
     image: `${IMAGE_PATH}/less.svg`,
     link: 'https://lesscss.org/',
     darkTheme: false,
-    about: [
-      '',
-    ],
+    about: false,
   },
   {
     name: 'javascript',
@@ -60,6 +58,7 @@ export const skills = [
       'Спецификация ES6',
       'Стрелочные функции',
       'Promise',
+      'ES-модули',
       'Классы',
     ],
   },
@@ -69,9 +68,7 @@ export const skills = [
     image: `${IMAGE_PATH}/ts.svg`,
     link: 'https://www.typescriptlang.org/',
     darkTheme: false,
-    about: [
-      '',
-    ],
+    about: false,
   },
   {
     name: 'react',
@@ -79,9 +76,7 @@ export const skills = [
     image: `${IMAGE_PATH}/react.svg`,
     link: 'https://react.dev/',
     darkTheme: true,
-    about: [
-      '',
-    ],
+    about: false,
   },
   {
     name: 'php',
@@ -89,9 +84,7 @@ export const skills = [
     image: `${IMAGE_PATH}/php.svg`,
     link: 'https://www.php.net/',
     darkTheme: false,
-    about: [
-      '',
-    ],
+    about: false,
   },
   {
     name: 'mssql',
@@ -99,9 +92,7 @@ export const skills = [
     image: `${IMAGE_PATH}/mssql.svg`,
     link: 'https://www.microsoft.com/en-us/sql-server',
     darkTheme: true,
-    about: [
-      '',
-    ],
+    about: false,
   },
   {
     name: 'mysql',
@@ -109,9 +100,7 @@ export const skills = [
     image: `${IMAGE_PATH}/mysql.svg`,
     link: 'https://www.mysql.com/',
     darkTheme: true,
-    about: [
-      '',
-    ],
+    about: false,
   },
   {
     name: 'git',
@@ -119,9 +108,7 @@ export const skills = [
     image: `${IMAGE_PATH}/git.svg`,
     link: 'https://www.git-scm.com/',
     darkTheme: true,
-    about: [
-      '',
-    ],
+    about: false,
   },
   {
     name: 'figma',
@@ -129,9 +116,7 @@ export const skills = [
     image: `${IMAGE_PATH}/figma.svg`,
     link: 'https://www.figma.com/',
     darkTheme: true,
-    about: [
-      '',
-    ],
+    about: false,
   },
   {
     name: 'illustrator',
@@ -140,7 +125,7 @@ export const skills = [
     link: 'https://www.adobe.com/products/illustrator.html',
     darkTheme: false,
     about: [
-      '',
+      'Умение рисовать векторные иконки',
     ],
   },
   {
@@ -150,7 +135,7 @@ export const skills = [
     link: 'https://www.adobe.com/products/photoshop.html',
     darkTheme: false,
     about: [
-      '',
+      'Умение рисовать растровые иконки',
     ],
   },
 ];
