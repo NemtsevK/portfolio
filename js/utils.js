@@ -1,0 +1,1 @@
+function fadeIn(t,e,i=(()=>{}),s="block"){t.style.opacity="0",t.style.display=s,t.style.transition=`opacity ${e}ms`,setTimeout((()=>{t.style.opacity="1",i()}),10)}function fadeOut(t,e,i=(()=>{})){null!==t&&(t.style.opacity="1",t.style.transition=`opacity ${e}ms`,t.style.opacity="0",setTimeout((()=>{t.style.display="none",i()}),e))}export{fadeIn,fadeOut};
