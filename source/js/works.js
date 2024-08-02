@@ -16,6 +16,7 @@ function initWorksContainer() {
 
     if (workButtonClose) {
       workElement.classList.remove('work--active');
+      workElement.tabIndex = '0';
       return;
     }
 
@@ -46,8 +47,6 @@ function initWorksContainer() {
   worksContainer.addEventListener('click', onWorksContainerClick);
   worksContainer.addEventListener('keyup', onWorksContainerKeyUp);
   worksButton.addEventListener('click', onWorksButtonClick)
-
-
 }
 
 function setWorksContainer() {
@@ -100,6 +99,7 @@ function setWorksContainer() {
  */
 function showActiveContainer(workElement, worksContainer) {
   if (workElement && workElement.classList.contains('work--active') === false) {
+    wrapGrid(worksContainer);
     const workElementActive = worksContainer.querySelector('.work--active');
 
     if (workElementActive) {
@@ -109,7 +109,6 @@ function showActiveContainer(workElement, worksContainer) {
 
     workElement.classList.add('work--active');
     workElement.tabIndex = '-1';
-    wrapGrid(worksContainer);
   }
 }
 

@@ -24,16 +24,17 @@
 }
 
 .skills__item-button {
-  width: 100px;
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   padding: 0;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  border: none;
+  border: 0;
   cursor: pointer;
-  transition: 0.2s;
+  color: var(--primary-text);
+  font-size: 18px;
+  transition: transform 0.2s;
 
   &:hover {
     transform: scale(1.05);
@@ -48,11 +49,19 @@
   }
 }
 
-.skills__item-picture {
-  width: 100px;
-  height: 100px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+.skills__item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills__item-image {
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $tablet) {
+    width: 80px;
+    height: 80px;
+  }
 }

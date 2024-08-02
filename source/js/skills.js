@@ -1,4 +1,5 @@
 import { skills } from './data/skills.js';
+import { fadeIn, fadeOut } from './utils.js';
 
 /**
  * инициализация контейнера с навыками
@@ -9,36 +10,45 @@ function initSkillsContainer() {
   const skillItem = skillTemplate.querySelector('.skills__item');
   const skillsFragment = document.createDocumentFragment();
 
-  const onSkillsContainerClick = ({ target }) => {
-    if (target.tagName === 'BUTTON') {
-      const skill = skills.find((skill) => skill.name === target.name);
-      setModal(skill);
-    }
+  const onSkillsContainerClick = ({ currentTarget }) => {
+    const skill = skills.find((skill) => skill.name === currentTarget.name);
+    setModal(skill);
   }
 
   skills.forEach((skill) => {
-    const { name, title, about } = skill;
+    const { name, text, title, about } = skill;
     const skillElement = skillItem.cloneNode(true);
     const imagePath = getImagePath(skill);
 
     const tagName = about === false ? 'div' : 'button';
-    const className = about === false ? 'skills__item-picture' : 'skills__item-button';
-    const skillPicture = document.createElement(tagName);
+    const className = about === false ? 'skills__item-content' : 'skills__item-button';
+    const skillContent = document.createElement(tagName);
+    const skillImage = document.createElement('img');
+    const skillText = document.createElement('span');
 
-    skillPicture.classList.add(className);
-    if(about !== false) {
-      skillPicture.name = name;
+    skillContent.classList.add(className);
+    if (about !== false) {
+      skillContent.name = name;
     }
-    skillPicture.title = title;
-    skillPicture.ariaLabel = name;
-    skillPicture.style.backgroundImage = `url("${imagePath}")`;
+    skillContent.title = title;
 
-    skillElement.appendChild(skillPicture);
-    skillsFragment.appendChild(skillElement);
+    skillImage.classList.add('skills__item-image');
+    skillImage.src = imagePath;
+    skillImage.alt = title;
+    skillContent.append(skillImage);
+
+    skillText.classList.add('skills__item-text');
+    skillText.textContent = text;
+    skillContent.append(skillText);
+
+    skillElement.prepend(skillContent);
+    skillsFragment.append(skillElement);
+
   });
 
-  skillsContainer.appendChild(skillsFragment);
-  skillsContainer.addEventListener('click', onSkillsContainerClick);
+  skillsContainer.append(skillsFragment);
+  const skillsButtons = skillsContainer.querySelectorAll('.skills__item-button');
+  skillsButtons.forEach((button) => button.addEventListener('click', onSkillsContainerClick));
 }
 
 /**
@@ -46,7 +56,7 @@ function initSkillsContainer() {
  * @param skill
  */
 function setModal(skill) {
-  const { title, image, about } = skill;
+  const { title, about } = skill;
   const page = document.querySelector('.page');
   const modal = document.querySelector('.modal');
   const modalImage = modal.querySelector('.modal__image');
@@ -55,10 +65,12 @@ function setModal(skill) {
   const buttonClose = modal.querySelector('.modal__close');
 
   const closeModal = () => {
-    modal.close();
-    modalTitle.innerText = '';
-    modalAbout.innerText = '';
-    page.classList.remove('page--scroll-lock');
+    fadeOut(modal, 200, () => {
+      modal.close();
+      modalTitle.innerText = '';
+      modalAbout.innerText = '';
+      page.classList.remove('page--scroll-lock');
+    });
   }
 
   const onButtonClick = () => closeModal();
@@ -76,32 +88,34 @@ function setModal(skill) {
   }
 
   page.classList.add('page--scroll-lock');
-  modal.showModal();
-  modalImage.src = getImagePath(skill);
-  modalImage.alt = title;
-  modalTitle.innerText = title;
 
-  about.forEach((item) => {
-    const itemElement = document.createElement('li');
-    itemElement.classList.add('modal__about-item');
-    itemElement.innerText = item;
-    modalAbout.appendChild(itemElement);
-  })
+  fadeIn(modal, 200, () => {
+    modal.showModal();
+    modalImage.src = getImagePath(skill);
+    modalImage.alt = title;
+    modalTitle.innerText = title;
 
-  modal.addEventListener('click', onModalClick);
-  modal.addEventListener('keydown', onModalKeyDown)
-  buttonClose.addEventListener('click', onButtonClick);
+    about.forEach((item) => {
+      const itemElement = document.createElement('li');
+      itemElement.classList.add('modal__about-item');
+      itemElement.innerText = item;
+      modalAbout.appendChild(itemElement);
+    })
+
+    modal.addEventListener('click', onModalClick);
+    modal.addEventListener('keydown', onModalKeyDown)
+    buttonClose.addEventListener('click', onButtonClick);
+  }, 'flex')
 }
 
 /**
  * установить картинки навыков
  */
 function setSkillsImage() {
-  const skillsElements = document.querySelectorAll('.skills__item-button, .skills__item-picture');
+  const skillsImages = document.querySelectorAll('.skills__item-image');
 
-  skillsElements.forEach((skillElement, index) => {
-    const imagePath = getImagePath(skills[index]);
-    skillElement.style.backgroundImage = `url("${imagePath}")`;
+  skillsImages.forEach((skillImage, index) => {
+    skillImage.src = getImagePath(skills[index]);
   });
 }
 
