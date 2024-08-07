@@ -40,7 +40,11 @@ export const skills = [
     image: `${IMAGE_PATH}/sass.svg`,
     link: 'https://sass-lang.com/',
     darkTheme: false,
-    about: false,
+    about: [
+      'Переменные',
+      'Вложенные правила',
+      'Миксины'
+    ],
   },
   {
     name: 'less',
@@ -49,7 +53,11 @@ export const skills = [
     image: `${IMAGE_PATH}/less.svg`,
     link: 'https://lesscss.org/',
     darkTheme: false,
-    about: false,
+    about: [
+      'Переменные',
+      'Вложенные правила',
+      'Миксины'
+    ],
   },
   {
     name: 'javascript',
@@ -107,7 +115,13 @@ export const skills = [
     title: 'Таск-раннер Gulp',
     image: `${IMAGE_PATH}/gulp.svg`,
     darkTheme: false,
-    about: false,
+    about: [
+      'Настройка сборки проекта (gulpfile.js)',
+      'Создание и управление тасками',
+      'Автоматизация задач (минификация CSS/JS, конкатенация файлов)',
+      'Работа с плагинами',
+      'Автоматическая перезагрузка браузера (browser-sync)',
+    ],
   },
   {
     name: 'webpack',
@@ -115,7 +129,11 @@ export const skills = [
     title: 'Сборщик Webpack',
     image: `${IMAGE_PATH}/webpack.svg`,
     darkTheme: false,
-    about: false,
+    about: [
+      'Конфигурация Webpack (webpack.config.js)',
+      'Работа с модулями (module bundling)',
+      'Использование плагинов',
+    ],
   },
   {
     name: 'vite',
