@@ -1,0 +1,27 @@
+@keyframes slide-work-down {
+  0% {
+    height: 0;
+    margin-top: -40px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 300px;
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-work-up {
+  0% {
+    height: 300px;
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  100% {
+    height: 0;
+    margin-top: -40px;
+    opacity: 0;
+  }
+}

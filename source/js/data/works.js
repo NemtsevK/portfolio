@@ -2,7 +2,7 @@ const IMAGE_PATH = 'images/content';
 
 /**
  *
- * @type {({technologies: string[], image: string, site: string, visible: boolean, about: string[], description: string, id: string, source: string, title: string)[]}
+ * @type {({technologies: string[], image: string, site: string, about: string[], description: string, id: string, source: string, title: string)[]}
  */
 export const works = [
   {
@@ -13,7 +13,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/cat-energy/',
     source: 'https://github.com/NemtsevK/cat-energy/',
     technologies: ['HTML', 'Sass', 'JS', 'Gulp'],
-    visible: true,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Mobile First).',
       'Написан CSS-код на препроцессоре Sass (SCSS).',
@@ -33,7 +32,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/sedona/',
     source: 'https://github.com/NemtsevK/sedona/',
     technologies: ['HTML', 'Sass', 'JS', 'Gulp', 'Nunjucks'],
-    visible: true,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Mobile First).',
       'Написан CSS-код на препроцессоре Sass (SCSS).',
@@ -52,7 +50,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/kekstagram/',
     source: 'https://github.com/NemtsevK/kekstagram/',
     technologies: ['JS', 'ES Modules', 'Vite'],
-    visible: true,
     about: [
       'Описание',
     ],
@@ -65,7 +62,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/big-trip/',
     source: 'https://github.com/NemtsevK/big-trip/',
     technologies: ['JS', 'SPA', 'MVP', 'Webpack'],
-    visible: true,
     about: [
       'Разработано SPA',
       'Использован сборщик Webpack',
@@ -79,7 +75,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/six-cities/',
     source: 'https://github.com/NemtsevK/six-cities/',
     technologies: ['TypeScript', 'React', 'Redux', 'Vite'],
-    visible: true,
     about: [
       'Использован сборщик Vite',
     ],
@@ -92,7 +87,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/polyhedrons/',
     source: 'https://github.com/NemtsevK/polyhedrons/',
     technologies: ['HTML', 'Sass', 'JS', 'Gulp', 'Nunjucks'],
-    visible: true,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Mobile First).',
       'Написан CSS-код на препроцессоре Sass (SCSS).',
@@ -108,10 +102,9 @@ export const works = [
     title: 'Фотоконкурс',
     description: 'Страница с фотографиями для конкурсов.',
     image: `${IMAGE_PATH}/photo-contests.jpg`,
-    site: 'http://nemtsevk.ru/photo-contests/',
+    site: 'http://nemtsevk.ru/projects/photo-contests/',
     source: 'https://github.com/NemtsevK/photo-contests/',
     technologies: ['HTML', 'CSS', 'JS', 'PHP', 'SQL'],
-    visible: true,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Mobile First).',
       'Данные для сайта загружаются с сервера с помощью Fetch API.',
@@ -123,10 +116,9 @@ export const works = [
     title: 'Компания',
     description: 'Сайт-визитка IT-компании.',
     image: `${IMAGE_PATH}/company.jpg`,
-    site: 'http://nemtsevk.ru/company/',
+    site: 'http://nemtsevk.ru/projects/company/',
     source: 'https://github.com/NemtsevK/company/',
     technologies: ['HTML', 'CSS', 'JS', 'PHP', 'SQL'],
-    visible: true,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Desktop First).',
       'Код в JavaScript реализован через ES-модули',
@@ -144,7 +136,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/rooms/',
     source: 'https://github.com/NemtsevK/rooms/',
     technologies: ['HTML', 'Sass', 'JS', 'Gulp'],
-    visible: true,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Desktop First).',
       'Написан CSS-код на препроцессоре Sass (SCSS).',
@@ -161,7 +152,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/barbershop/',
     source: 'https://github.com/NemtsevK/barbershop/',
     technologies: ['HTML', 'Sass', 'JS', 'Gulp', 'Nunjucks'],
-    visible: false,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Mobile First).',
       'Написан CSS-код на препроцессоре Sass (SCSS).',
@@ -180,7 +170,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/mishka/',
     source: 'https://github.com/NemtsevK/mishka/',
     technologies: ['HTML', 'Sass', 'JS', 'Gulp', 'Nunjucks'],
-    visible: false,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Mobile First).',
       'Написан CSS-код на препроцессоре Sass (SCSS).',
@@ -199,7 +188,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/pink/',
     source: 'https://github.com/NemtsevK/pink/',
     technologies: ['HTML', 'Less', 'JS', 'Gulp'],
-    visible: false,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Mobile First).',
       'Написан CSS-код на препроцессоре Less.',
@@ -217,7 +205,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/nerds/',
     source: 'https://github.com/NemtsevK/nerds/',
     technologies: ['HTML', 'Less', 'JS', 'Gulp'],
-    visible: false,
     about: [
       'Создана разметка по методологии БЭМ.',
       'Написан CSS-код на препроцессоре Less.',
@@ -227,19 +214,6 @@ export const works = [
       'Сборка и минификация SVG-спрайта.',
     ],
   },
-  // {
-  //   id: 'device',
-  //   title: 'Девайс',
-  //   description: 'Магазин гаджетов.',
-  //   image: `${IMAGE_PATH}/device.jpg`,
-  //   site: 'https://nemtsevk.github.io/device/',
-  //   source: 'https://github.com/NemtsevK/device/',
-  //   technologies: ['HTML', 'CSS'],
-  //   visible: false,
-  //   about: [
-  //     'Семантическая вёрстка.',
-  //   ],
-  // },
   {
     id: 'gllacy',
     title: 'Глейси',
@@ -248,7 +222,6 @@ export const works = [
     site: 'https://nemtsevk.github.io/gllacy/',
     source: 'https://github.com/NemtsevK/gllacy/',
     technologies: ['HTML', 'CSS'],
-    visible: false,
     about: [
       'Создана разметка по методологии БЭМ, семантическая и адаптивная вёрстка (Mobile First).',
       'Написан CSS-код на препроцессоре Sass (SCSS).',
@@ -259,17 +232,4 @@ export const works = [
       'Использование шаблонизатора Nunjucks.',
     ],
   },
-  // {
-  //   id: 'technomart',
-  //   title: 'Техномарт',
-  //   description: 'Магазин строительных материалов.',
-  //   image: `${IMAGE_PATH}/technomart.jpg`,
-  //   site: 'https://nemtsevk.github.io/technomart/',
-  //   source: 'https://github.com/NemtsevK/technomart/',
-  //   technologies: ['HTML', 'Sass', 'JS', 'Gulp', 'Nunjucks'],
-  //   visible: false,
-  //   about: [
-  //     'Семантическая вёрстка.',
-  //   ],
-  // },
 ];

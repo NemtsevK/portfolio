@@ -2,13 +2,15 @@
 
 .work {
   width: 100%;
-  height: 100%;
+  height: 300px;
   overflow: hidden;
   text-decoration: none;
   color: var(--primary-text);
   border: 2px solid var(--primary-border);
   border-radius: 20px;
   transition: border 0.2s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 
   &:focus-visible:not(.work--active) {
     border: 2px solid var(--primary-background);
@@ -22,6 +24,38 @@
 
   &--hidden {
     display: none;
+  }
+}
+
+.work--active {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: auto;
+  border: 2px solid var(--focus);
+
+  @media (min-width: $tablet) {
+    height: calc(300px * 2 + 40px);
+  }
+
+  .work__content {
+    margin-top: 200px;
+
+    @media (min-width: $tablet) {
+      margin-top: 0;
+    }
+  }
+
+  .work__about {
+    display: block;
+  }
+
+  .work__footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
+    padding: 0 20px 20px;
+    background-color: rgba(var(--primary-background-rgb), 0.9);
   }
 }
 
@@ -139,33 +173,6 @@
 
 .work__button--close::before {
   mask-image: url("../images/sprite.svg#close");
-}
-
-.work--active {
-  grid-column: span 2;
-  grid-row: span 2;
-  border: 2px solid var(--focus);
-
-  .work__content {
-    margin-top: 200px;
-
-    @media (min-width: $tablet) {
-      margin-top: 0;
-    }
-  }
-
-  .work__about {
-    display: block;
-  }
-
-  .work__footer {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    gap: 20px;
-    padding: 0 20px 20px;
-    background-color: rgba(var(--primary-background-rgb), 0.9);
-  }
 }
 
 .works__button {

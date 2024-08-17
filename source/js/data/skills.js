@@ -91,7 +91,12 @@ export const skills = [
     image: `${IMAGE_PATH}/react.svg`,
     link: 'https://react.dev/',
     darkTheme: true,
-    about: false,
+    about: [
+      'Управление состоянием',
+      'Использование хуков',
+      'Маршрутизация с React Router',
+      'Библиотека Redux',
+    ],
   },
   {
     name: 'jquery',
@@ -150,7 +155,15 @@ export const skills = [
     image: `${IMAGE_PATH}/php.svg`,
     link: 'https://www.php.net/',
     darkTheme: false,
-    about: false,
+    about: [
+      'Управление сессиями и куками',
+      'Валидация данных',
+      'Защита от SQL-инъекций',
+      'Обработка ошибка',
+      'Объектно-ориентированное программирование',
+      'Взаимодействие с базами данными',
+      'Выполнение CRUD операций',
+    ],
   },
   {
     name: 'mssql',
@@ -177,7 +190,12 @@ export const skills = [
     image: `${IMAGE_PATH}/git.svg`,
     link: 'https://www.git-scm.com/',
     darkTheme: false,
-    about: false,
+    about: [
+      'Работа с ветками',
+      'Управление удалёнными репозиториями',
+      'Разрешение конфликтов слияния',
+      'Использование веб-сервиса GitHub',
+    ],
   },
   {
     name: 'phpstorm',
